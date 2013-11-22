@@ -1,2 +1,176 @@
 @import "foundation";
-@import "normalize"
+@import "normalize";
+
+#wrapper { text-align: center; }
+#sidebar{
+  background-image: url('../images/LOGO_Lorenzetto.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  display: inline-block;
+  padding: 1%;
+  margin: 2% 3% 1%;
+  // width: 275px;
+  width: 90%;
+  // height: 250px;
+  height: 30%;
+  border: 1px solid black;
+  // position: relative;
+  // float: left;
+  p{
+   margin: 0 auto; 
+   text-align: center;
+   font-weight: bold;
+   font-family: Arial;
+   color: rgb(0,169,157);
+  }
+}
+
+#sidebar-text{
+  margin: 50% auto 0;
+}
+
+
+li { list-style: none; }
+
+li.elements{
+   width: 80px;
+   height: 77px;
+   text-align: center;
+   margin: 2% 3% ;
+   position: relative;
+   display: inline-block;
+   // float: left;
+   // list-style: none;
+   a {
+     position: relative;
+     left: 0;
+     top: 45px;
+     color: white;
+     font-family: Arial, Georgia, Palatino, Palatino Linotype, Times, Times New         Roman, serif;
+     font-size: 13px;
+   }
+ } 
+
+ li.elements{ border: 6px solid transparent; }
+ li.elements:hover{ border: 6px solid black; }
+li.item-102{ 
+  background-color: rgb(203,18,45);
+  display: none;
+}
+.item-103{ background-color: rgb(235,106,66); }
+.item-104{ background-color: rgb(255,230,25); }
+.item-105{ background-color: rgb(133,189,97); }
+.item-106{ background-color: rgb(0,155,186); }
+.item-107{ background-color: rgb(124,101,150); }
+.item-108{ background-color: black; }
+
+ul.menu{
+  margin: 5% 2% 1%;
+  text-align: center;
+}
+
+ul.actions{
+  float: right;
+}
+
+.article-body{
+  display: inline-block;
+  width: 80%;
+  float: left;
+}
+
+
+.actions li{
+  width: 45px;
+  height: 45px;
+  background-color: rgb(102,194,195);
+  margin: 20px auto;
+  a{
+    position: relative;
+    left: 0;
+    top: 12px;
+    text-transform: uppercase;
+    color: rgb(36,56,57);
+    font-size: 12px;
+    font-weight: bold;
+
+  }
+}
+
+header h1{
+  color: rgb(19,155,140);
+}
+
+.article-body p{
+  font-size: 13px;
+  text-align: justify;
+}
+
+.actions li.email a{
+  left: 3px;
+}
+
+// div.footer-out{
+//   background-image: url('../images/girandola_sfumata.png');
+//   background-position: right top;
+//   background-repeat: no-repeat;
+//   width: 100%;
+//   height: 200px;
+//   position: absolute;
+// 
+// }
+// 
+div.footer-in{
+  background-image: url('../images/banca_fiorellino_fiori.png');
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 140px;
+}
+
+body{
+  background-image: url('../images/girandola_sfumata.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 568px){
+  #sidebar{
+    width: 220px;
+    height: 500px;
+  }
+  #sidebar-text{
+    margin-top: 165%;
+  }
+  li.item-102 { display: inline-block; }
+  li.elements{
+    margin: 1%;
+    float: left;
+  }
+  #sidebar{ float: left;}
+  ul.menu { margin: 8% auto 1%; }
+
+  .article-body{
+    width: 100%;
+  }
+}
+
+/* Retina iPad in portrait & landscape */
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  /* STYLES GO HERE */
+}
+// iPad mini in portrait & landscape
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+/* STYLES GO HERE */
+}
+// iPhone 5 in portrait & landscape
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+}
+

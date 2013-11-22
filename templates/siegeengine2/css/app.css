@@ -7302,3 +7302,222 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* line 4, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+#wrapper {
+  text-align: center;
+}
+
+/* line 5, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+#sidebar {
+  background-image: url("../images/LOGO_Lorenzetto.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  display: inline-block;
+  padding: 1%;
+  margin: 2% 3% 1%;
+  width: 90%;
+  height: 30%;
+  border: 1px solid black;
+}
+/* line 21, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+#sidebar p {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial;
+  color: #00a99d;
+}
+
+/* line 30, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+#sidebar-text {
+  margin: 50% auto 0;
+}
+
+/* line 35, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li {
+  list-style: none;
+}
+
+/* line 37, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li.elements {
+  width: 80px;
+  height: 77px;
+  text-align: center;
+  margin: 2% 3%;
+  position: relative;
+  display: inline-block;
+}
+/* line 46, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li.elements a {
+  position: relative;
+  left: 0;
+  top: 45px;
+  color: white;
+  font-family: Arial, Georgia, Palatino, Palatino Linotype, Times, Times New         Roman, serif;
+  font-size: 13px;
+}
+
+/* line 56, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li.elements {
+  border: 6px solid transparent;
+}
+
+/* line 57, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li.elements:hover {
+  border: 6px solid black;
+}
+
+/* line 58, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+li.item-102 {
+  background-color: #cb122d;
+  display: none;
+}
+
+/* line 62, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-103 {
+  background-color: #eb6a42;
+}
+
+/* line 63, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-104 {
+  background-color: #ffe619;
+}
+
+/* line 64, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-105 {
+  background-color: #85bd61;
+}
+
+/* line 65, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-106 {
+  background-color: #009bba;
+}
+
+/* line 66, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-107 {
+  background-color: #7c6596;
+}
+
+/* line 67, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.item-108 {
+  background-color: black;
+}
+
+/* line 69, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+ul.menu {
+  margin: 5% 2% 1%;
+  text-align: center;
+}
+
+/* line 74, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+ul.actions {
+  float: right;
+}
+
+/* line 78, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.article-body {
+  display: inline-block;
+  width: 80%;
+  float: left;
+}
+
+/* line 85, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.actions li {
+  width: 45px;
+  height: 45px;
+  background-color: #66c2c3;
+  margin: 20px auto;
+}
+/* line 90, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.actions li a {
+  position: relative;
+  left: 0;
+  top: 12px;
+  text-transform: uppercase;
+  color: #243839;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 102, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+header h1 {
+  color: #139b8c;
+}
+
+/* line 106, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.article-body p {
+  font-size: 13px;
+  text-align: justify;
+}
+
+/* line 111, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+.actions li.email a {
+  left: 3px;
+}
+
+/* line 125, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+div.footer-in {
+  background-image: url("../images/banca_fiorellino_fiori.png");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 140px;
+}
+
+/* line 132, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+body {
+  background-image: url("../images/girandola_sfumata.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 568px) {
+  /* line 139, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  #sidebar {
+    width: 220px;
+    height: 500px;
+  }
+
+  /* line 143, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  #sidebar-text {
+    margin-top: 165%;
+  }
+
+  /* line 146, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  li.item-102 {
+    display: inline-block;
+  }
+
+  /* line 147, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  li.elements {
+    margin: 1%;
+    float: left;
+  }
+
+  /* line 151, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  #sidebar {
+    float: left;
+  }
+
+  /* line 152, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  ul.menu {
+    margin: 8% auto 1%;
+  }
+
+  /* line 154, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  .article-body {
+    width: 100%;
+  }
+}
+/* Retina iPad in portrait & landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* STYLES GO HERE */
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* STYLES GO HERE */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* STYLES GO HERE */
+}
