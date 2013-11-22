@@ -1,5 +1,6 @@
 @import "foundation";
 @import "normalize";
+@import "compass/css3";
 
 #wrapper { text-align: center; }
 #sidebar{
@@ -25,6 +26,7 @@
    font-family: Arial;
    color: rgb(0,169,157);
   }
+  @include single-box-shadow(black, 5px, 5px, 5px);
 }
 
 #sidebar-text{
@@ -35,7 +37,7 @@
 li { list-style: none; }
 
 li.elements{
-   width: 80px;
+   width: 84px;
    height: 77px;
    text-align: center;
    margin: 2% 3% ;
@@ -65,6 +67,7 @@ li.item-102{
 .item-106{ background-color: rgb(0,155,186); }
 .item-107{ background-color: rgb(124,101,150); }
 .item-108{ background-color: black; }
+.item-108{ background-color: rgb(99,99,99); }
 
 ul.menu{
   margin: 5% 2% 1%;
@@ -135,10 +138,10 @@ body{
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 568px){
+@media screen and (min-width: 480px){
   #sidebar{
     width: 220px;
-    height: 500px;
+    // height: 370px;
   }
   #sidebar-text{
     margin-top: 165%;
@@ -147,6 +150,7 @@ body{
   li.elements{
     margin: 1%;
     float: left;
+    width: 82px;
   }
   #sidebar{ float: left;}
   ul.menu { margin: 8% auto 1%; }
@@ -172,5 +176,43 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 @media only screen and (min-device-width : 320px) 
 and (max-device-width : 568px) {
 /* STYLES GO HERE */
+  li.elements {
+    // width: 90px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width: 568px){
+  li.elements{
+    width: 86px;
+  }
+  li.item-102{
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1010px){
+  li.item-102{
+    display: none;
+  }
+  #sidebar{
+    height: 225px;
+  }
+  #sidebar-text{
+    margin-top: 55%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 560px){
+  #sidebar{ height: 370px; }
+  #sidebar-text{ margin-top: 120%; }
+}
+@media screen and (min-width: 560px) and (max-width: 655px){ 
+  #sidebar{ height: 300px; }
+  #sidebar-text{ margin-top: 90%; }
+}
+
+@media screen and (min-width: 655px) and (max-width: 850px){
+  #sidebar{ height: 225px; }
+  #sidebar-text{ margin-top: 55%; }
 }
 
