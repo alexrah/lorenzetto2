@@ -5,6 +5,7 @@
 #wrapper { text-align: center; }
 #sidebar{
   background-image: url('../images/LOGO_Lorenzetto.png');
+  background-color: white;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -26,7 +27,8 @@
    font-family: Arial;
    color: rgb(0,169,157);
   }
-  @include single-box-shadow(black, 5px, 5px, 5px);
+  // @include single-box-shadow(grey, 6px, 6px, 5px);
+  @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
 }
 
 #sidebar-text{
@@ -37,7 +39,7 @@
 li { list-style: none; }
 
 li.elements{
-   width: 84px;
+   width: 82.8px;
    height: 77px;
    text-align: center;
    margin: 2% 3% ;
@@ -57,17 +59,17 @@ li.elements{
 
  li.elements{ border: 6px solid transparent; }
  li.elements:hover{ border: 6px solid black; }
-li.item-102{ 
+ li.elements.active{ border: 6px solid black; }
+li.item-102, li.item-110, li.item-117{ 
   background-color: rgb(203,18,45);
   display: none;
 }
-.item-103{ background-color: rgb(235,106,66); }
-.item-104{ background-color: rgb(255,230,25); }
-.item-105{ background-color: rgb(133,189,97); }
-.item-106{ background-color: rgb(0,155,186); }
-.item-107{ background-color: rgb(124,101,150); }
-.item-108{ background-color: black; }
-.item-108{ background-color: rgb(99,99,99); }
+.item-103, .item-111, .item-118{ background-color: rgb(235,106,66); }
+.item-104, .item-112, .item-119{ background-color: rgb(255,230,25); }
+.item-105, .item-113, .item-120{ background-color: rgb(133,189,97); }
+.item-106, .item-114, .item-121{ background-color: rgb(0,155,186); }
+.item-107, .item-115, .item-122{ background-color: rgb(124,101,150); }
+.item-108, .item-116, .item-123{ background-color: rgb(99,99,99); }
 
 ul.menu{
   margin: 5% 2% 1%;
@@ -115,28 +117,72 @@ header h1{
   left: 3px;
 }
 
-// div.footer-out{
-//   background-image: url('../images/girandola_sfumata.png');
-//   background-position: right top;
-//   background-repeat: no-repeat;
-//   width: 100%;
-//   height: 200px;
-//   position: absolute;
-// 
-// }
-// 
+div.footer-out{
+  background-image: url('../images/girandola_sfumata.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+
+}
+
 div.footer-in{
   background-image: url('../images/banca_fiorellino_fiori.png');
-  background-repeat: repeat-x;
-  width: 100%;
+  background-repeat: no-repeat;
+  width: 85%;
+  float: right;
   height: 140px;
+  margin-right: 1%;
 }
 
 body{
-  background-image: url('../images/girandola_sfumata.png');
-  background-position: bottom right;
+  background-image: url('../images/foto-margherita.jpg');
+  background-position: center left;
   background-repeat: no-repeat;
 }
+
+
+// .mod-languages{
+//   width: 45px;
+//   height: 45px;
+//   position: relative;
+//   float: right;
+//   margin: 3% 1% 1% 0;
+//   font-size: 20px;
+//   a {
+//     color: black;
+//     position: relative;
+//     top: 5px;
+//     left: 5px;
+//   }
+// }
+// 
+// .mod-languages:hover{
+//   border: 2px solid red;
+// }
+// 
+.mod-languages:visited{
+  border: 2px solid black;
+}
+
+div.mod-languages ul.lang-block{
+  float: right;
+  margin: 3% 1% 1% 0;
+  font-size: 20px;
+    li{
+    display: inline-block;
+      a{
+          color: black;
+          position: relative;
+          top: 5px;
+          left: 5px;
+      }
+    }
+}
+
+
+
+
 
 @media screen and (min-width: 480px){
   #sidebar{
@@ -146,7 +192,7 @@ body{
   #sidebar-text{
     margin-top: 165%;
   }
-  li.item-102 { display: inline-block; }
+  li.item-102, li.item-110, li.item-117 { display: inline-block; }
   li.elements{
     margin: 1%;
     float: left;
@@ -188,6 +234,10 @@ and (max-device-width : 568px) {
   li.item-102{
     display: inline-block;
   }
+}
+
+@media screen and (min-width:568px){
+  li.elements{ width: 82.8px; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1010px){
