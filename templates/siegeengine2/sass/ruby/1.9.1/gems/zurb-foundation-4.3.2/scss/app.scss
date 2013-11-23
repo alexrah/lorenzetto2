@@ -2,6 +2,9 @@
 @import "normalize";
 @import "compass/css3";
 
+
+/* START SIDEBAR STYLE */
+
 #wrapper { text-align: center; }
 #sidebar{
   background-image: url('../images/LOGO_Lorenzetto.png');
@@ -9,6 +12,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
+  @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
   display: inline-block;
   padding: 1%;
@@ -27,39 +31,39 @@
    font-family: Arial;
    color: rgb(0,169,157);
   }
-  // @include single-box-shadow(grey, 6px, 6px, 5px);
-  @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
 }
 
 #sidebar-text{
   margin: 50% auto 0;
 }
 
+/* END SIDEBAR STYLE */
 
-li { list-style: none; }
+/* START MENU STYLE */
 
-li.elements{
-   width: 82.8px;
-   height: 77px;
-   text-align: center;
-   margin: 2% 3% ;
-   position: relative;
-   display: inline-block;
-   // float: left;
-   // list-style: none;
-   a {
-     position: relative;
-     left: 0;
-     top: 45px;
-     color: white;
-     font-family: Arial, Georgia, Palatino, Palatino Linotype, Times, Times New         Roman, serif;
-     font-size: 13px;
+li {
+  list-style: none; 
+}
+ li.elements{
+    width: 82.8px;
+    height: 77px;
+    text-align: center;
+    margin: 2% 3% ;
+    position: relative;
+    display: inline-block;
+    border: 6px solid transparent;
+    a {
+      position: relative;
+      left: 0;
+      top: 45px;
+      color: white;
+      font-family: Arial, Georgia, Palatino, Palatino Linotype, Times, Times New         Roman, serif;
+      font-size: 13px;
+    }
    }
- } 
-
- li.elements{ border: 6px solid transparent; }
- li.elements:hover{ border: 6px solid black; }
- li.elements.active{ border: 6px solid black; }
+ 
+li.elements:hover{ border: 6px solid black; }
+li.elements.active{ border: 6px solid black; }
 li.item-102, li.item-110, li.item-117{ 
   background-color: rgb(203,18,45);
   display: none;
@@ -72,22 +76,17 @@ li.item-102, li.item-110, li.item-117{
 .item-108, .item-116, .item-123{ background-color: rgb(99,99,99); }
 
 ul.menu{
-  margin: 5% 2% 1%;
+  margin: 5% 0% 1%;
   text-align: center;
 }
 
+/* END MENU STYLE */
+
+/* START RIGHT ACTION MENU STYLES */
+
 ul.actions{
   float: right;
-}
-
-.article-body{
-  display: inline-block;
-  width: 80%;
-  float: left;
-}
-
-
-.actions li{
+  li{
   width: 45px;
   height: 45px;
   background-color: rgb(102,194,195);
@@ -101,21 +100,39 @@ ul.actions{
     font-size: 12px;
     font-weight: bold;
 
+    }
   }
+}
+.actions li.email a{
+  left: 3px;
+}
+
+/* END RIGHT ACTION MENU STYLES */
+
+/* START ARTICLE BODY STYLES */
+
+body{
+  background-image: url('../images/foto-margherita.jpg');
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 
 header h1{
   color: rgb(19,155,140);
 }
-
-.article-body p{
-  font-size: 13px;
-  text-align: justify;
+.article-body{
+  display: inline-block;
+  width: 80%;
+  float: left;
+  p{
+    font-size: 13px;
+    text-align: justify;
+  }
 }
 
-.actions li.email a{
-  left: 3px;
-}
+/* END ARTICLE BODY STYLES */
+
+/* START FOOTER STYLES */
 
 div.footer-out{
   background-image: url('../images/girandola_sfumata.png');
@@ -123,6 +140,7 @@ div.footer-out{
   background-repeat: no-repeat;
   width: 100%;
   height: 200px;
+  margin-right: 1%;
 
 }
 
@@ -135,54 +153,64 @@ div.footer-in{
   margin-right: 1%;
 }
 
-body{
-  background-image: url('../images/foto-margherita.jpg');
-  background-position: center left;
-  background-repeat: no-repeat;
-}
 
+/* END FOOTER STYLES */
 
-// .mod-languages{
-//   width: 45px;
-//   height: 45px;
-//   position: relative;
-//   float: right;
-//   margin: 3% 1% 1% 0;
-//   font-size: 20px;
-//   a {
-//     color: black;
-//     position: relative;
-//     top: 5px;
-//     left: 5px;
-//   }
-// }
-// 
-// .mod-languages:hover{
-//   border: 2px solid red;
-// }
-// 
-.mod-languages:visited{
-  border: 2px solid black;
-}
+/* START LANGUAGE WIDE MENU */
 
-div.mod-languages ul.lang-block{
-  float: right;
-  margin: 3% 1% 1% 0;
-  font-size: 20px;
-    li{
-    display: inline-block;
+div.mod-languages_wide{
+  width: 100%;
+  display: none;
+    ul.lang-block{
+    float: right;
+    margin: 1% 3% 1% 0;
+    font-size: 20px;
+    .lang-active a{
+      border: 2px solid black;
+    }
+      li{
+        display: inline-block;
       a{
           color: black;
           position: relative;
           top: 5px;
           left: 5px;
+          padding: 15%;
       }
     }
+  }
 }
 
 
+/* END LANGUAGE WIDE MENU */
 
+/* ALLA MEDIA QUERIES START FROM HERE */
 
+/* Retina iPad in portrait & landscape */
+
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  /* STYLES GO HERE */
+}
+
+// iPad mini in portrait & landscape
+
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+/* STYLES GO HERE */
+}
+
+// iPhone 5 in portrait & landscape
+
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+  li.elements {
+    // width: 90px;
+  }
+}
 
 @media screen and (min-width: 480px){
   #sidebar{
@@ -199,31 +227,13 @@ div.mod-languages ul.lang-block{
     width: 82px;
   }
   #sidebar{ float: left;}
-  ul.menu { margin: 8% auto 1%; }
+  /* ul.menu { margin: 9% auto 1%; } */
 
   .article-body{
     width: 100%;
   }
-}
-
-/* Retina iPad in portrait & landscape */
-@media only screen and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  /* STYLES GO HERE */
-}
-// iPad mini in portrait & landscape
-@media only screen and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 1)  {
-/* STYLES GO HERE */
-}
-// iPhone 5 in portrait & landscape
-@media only screen and (min-device-width : 320px) 
-and (max-device-width : 568px) {
-/* STYLES GO HERE */
-  li.elements {
-    // width: 90px;
+  div.mod-languages_wide{
+    display: block;
   }
 }
 
@@ -241,7 +251,7 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1010px){
-  li.item-102{
+  li.item-102, li.item-110, li.item-117{
     display: none;
   }
   #sidebar{
@@ -250,7 +260,15 @@ and (max-device-width : 568px) {
   #sidebar-text{
     margin-top: 55%;
   }
+  ul.menu { margin-top: 6%; }
 }
+
+@media screen and (min-width: 480px) and (max-width: 760px){
+  ul.menu { margin: 9% auto 1%; }
+}
+
+/* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
+/* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
 
 @media screen and (min-width: 480px) and (max-width: 560px){
   #sidebar{ height: 370px; }
