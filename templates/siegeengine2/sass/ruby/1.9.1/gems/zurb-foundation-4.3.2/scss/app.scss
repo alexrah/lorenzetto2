@@ -2,6 +2,19 @@
 @import "normalize";
 @import "compass/css3";
 
+// @include font-face("coamei", font-files("../fonts/coamei_b.woff", woff, "../fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+@include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+
+@font-face {
+    font-family: coamei;
+    src: url('../fonts/coamei_b.eot');  /* fix IE not working with if ttf is the default format */
+    src: url('../fonts/coamei_b.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/coamei_b.woff') format('woff'),
+         url('../fonts/coamei_b.ttf') format('truetype');
+
+}
+
+
 
 /* START SIDEBAR STYLE */
 
@@ -28,13 +41,13 @@
    margin: 0 auto; 
    text-align: center;
    font-weight: bold;
-   font-family: Arial;
+   // font-family: Arial;
    color: rgb(0,169,157);
   }
 }
 
 #sidebar-text{
-  margin: 50% auto 0;
+  margin: 5% auto 0;
 }
 
 /* END SIDEBAR STYLE */
@@ -48,35 +61,102 @@ li {
     width: 82.8px;
     height: 77px;
     text-align: center;
-    margin: 2% 3% ;
+    // margin: 2% 3% ;
+    margin: 0% 1% 1%;
     position: relative;
     display: inline-block;
     border: 6px solid transparent;
     a {
       position: relative;
       left: 0;
-      top: 45px;
+      top: 41px;
       color: white;
-      font-family: Arial, Georgia, Palatino, Palatino Linotype, Times, Times New         Roman, serif;
       font-size: 13px;
+      font-weight: 800;
+      // text-shadow: 0 0 0 rgba(0, 0, 0, 1);
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); 
+      // @include single-text-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+      // @include single-text-shadow(rgba(0, 0, 0, 0.6) 0, 0, 1px);
     }
    }
- 
-li.elements:hover{ border: 6px solid black; }
-li.elements.active{ border: 6px solid black; }
+
+
 li.item-102, li.item-110, li.item-117{ 
   background-color: rgb(203,18,45);
   display: none;
 }
 .item-103, .item-111, .item-118{ background-color: rgb(235,106,66); }
 .item-104, .item-112, .item-119{ background-color: rgb(255,230,25); }
-.item-105, .item-113, .item-120{ background-color: rgb(133,189,97); }
-.item-106, .item-114, .item-121{ background-color: rgb(0,155,186); }
+.item-105, .item-113, .item-120{ background-color: rgb(0,171,164); }
+.item-106, .item-114, .item-121{ background-color: rgb(83,142,180); }
 .item-107, .item-115, .item-122{ background-color: rgb(124,101,150); }
 .item-108, .item-116, .item-123{ background-color: rgb(99,99,99); }
+li.elements.item-133 { 
+  background-image: url("../images/pulsante_carrello_bianco.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 6px solid rgb(153,204,102);
+  /* border: 0px solid transparent; */
+  /* width: 88.8px; */
+  /* height: 83px; */
+  /* margin-top: 4px; */
+  /* a{ top: 48px; } */
+}
+
+
+li.elements:hover{ border: 6px solid black; }
+li.elements.active{ border: 6px solid black; }
+li.elements.active a{ color: black; }
+li.elements.item-133 a:hover { top: 41px; }
+li.elements.item-133:hover {
+  /* a{ top: 42px; } */
+}
+li.elements.item-133.active {
+  a{ top: 42px; }
+}
+
+ /* START SIDEBAR MENU STYLES */
+
+div.sidebar-menu-block{
+  margin-top: 50%;
+}
+   
+.sidebar-menu{
+  // width: 100%;
+    ul.menu{
+      // text-align: center;
+    li.elements{
+      // position: relative;
+      // display: inline-block;
+      width: 60px;
+      height: 60px;
+      a{
+      position: relative;
+      left: -4px;
+      top: 10px;
+      font-size: 9px;
+      }
+    }
+  }
+}
+
+hr{
+  background-color: black;
+  height: 1px;
+  width: 90%;
+  margin: auto;
+}
+
+
+ /* END SIDEBAR MENU STYLES */
+
+li.item-127 { background-color: rgb(204, 204, 51); }
+li.item-128 { background-color: rgb(155, 203,156); }
+li.item-129 { background-color: rgb(102, 194,195); }
 
 ul.menu{
-  margin: 5% 0% 1%;
+  // margin: 5% 0% 1%;
+  margin: 4% auto 1%;
   text-align: center;
 }
 
@@ -121,12 +201,14 @@ header h1{
   color: rgb(19,155,140);
 }
 .article-body{
+  background-color: rgba(255, 255, 255, 0.8) ;
   display: inline-block;
   width: 80%;
   float: left;
   p{
     font-size: 13px;
     text-align: justify;
+    padding: 5%;
   }
 }
 
@@ -163,7 +245,8 @@ div.mod-languages_wide{
   display: none;
     ul.lang-block{
     float: right;
-    margin: 1% 3% 1% 0;
+    // margin: 1% 3% 1% 0;
+    margin: 0% 3% 0% 0;
     font-size: 20px;
     .lang-active a{
       border: 2px solid black;
@@ -174,11 +257,19 @@ div.mod-languages_wide{
           color: black;
           position: relative;
           top: 5px;
-          left: 5px;
+          left: 20px;
           padding: 15%;
+          font-size: 13px;
       }
     }
   }
+}
+
+div.mod-languages_narrow{
+  display: none;
+}
+div.above-content{
+  height: 0px;
 }
 
 
@@ -217,8 +308,12 @@ and (max-device-width : 568px) {
     width: 220px;
     // height: 370px;
   }
+  div.sidebar-menu-block{
+  /* margin-top: 100%; */
+  }
+
   #sidebar-text{
-    margin-top: 165%;
+    margin-top: 5%;
   }
   li.item-102, li.item-110, li.item-117 { display: inline-block; }
   li.elements{
@@ -244,43 +339,82 @@ and (max-device-width : 568px) {
   li.item-102{
     display: inline-block;
   }
+  div.sidebar-menu-block{
+  margin-top: 80%;
+  }
+
+
 }
 
 @media screen and (min-width:568px){
   li.elements{ width: 82.8px; }
 }
 
+@media screen and (min-width: 655px) and (max-width: 890px){
+  // #sidebar{ height: 225px; }
+  // #sidebar-text{ margin-top: 55%; }
+  // div.sidebar-menu-block{ display: none; }
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 1010px){
   li.item-102, li.item-110, li.item-117{
     display: none;
   }
   #sidebar{
-    height: 225px;
+    /* height: 210px; */
   }
   #sidebar-text{
-    margin-top: 55%;
+    /* margin-top: 50%; */
   }
   ul.menu { margin-top: 6%; }
 }
 
 @media screen and (min-width: 480px) and (max-width: 760px){
-  ul.menu { margin: 9% auto 1%; }
+  ._menu ul.menu { margin: 9% auto 1%; }
 }
 
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
 /* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
 
 @media screen and (min-width: 480px) and (max-width: 560px){
-  #sidebar{ height: 370px; }
-  #sidebar-text{ margin-top: 120%; }
+  #sidebar{ height: 380px; }
+  /* #sidebar-text{ margin-top: 125%; } */
 }
 @media screen and (min-width: 560px) and (max-width: 655px){ 
-  #sidebar{ height: 300px; }
-  #sidebar-text{ margin-top: 90%; }
+  /* #sidebar{ height: 300px; } */
+  #sidebar-text{ margin-top: 0%; }
+  div.sidebar-menu-block{ margin-top: 50%; }
 }
 
-@media screen and (min-width: 655px) and (max-width: 850px){
-  #sidebar{ height: 225px; }
-  #sidebar-text{ margin-top: 55%; }
-}
+@media screen and (max-width: 480px){
+  div.mod-languages_narrow{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: 160px;
+    left: 3px;
+      ul.lang-block{
+      float: right;
+      margin: 1% 3% 1% 0;
+      font-size: 20px;
+      .lang-active a{
+        border: 2px solid black;
+      }
+        li{
+          // display: inline-block;
+        a{
+           color: black;
+           position: relative;
+           top: 5px;
+           left: 5px;
+           padding: 15%;
+           font-size: 13px;
+         }
+        }
+     }
+   }
+  div.sidebar-menu-block{ margin-top: 50%; }
 
+
+}

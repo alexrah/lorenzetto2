@@ -36,7 +36,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php if (!$this->print) : ?>
 		<?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 			<ul class="actions">
-				<?php if ($params->get('show_print_icon')) : ?>
+				 <?php if ($params->get('show_print_icon')) : ?>
 					<li class="print"> <?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?> </li>
 				<?php endif; ?>
 				<?php if ($params->get('show_email_icon')) : ?>
