@@ -11,7 +11,16 @@
     src: url('../fonts/coamei_b.eot?#iefix') format('embedded-opentype'),
          url('../fonts/coamei_b.woff') format('woff'),
          url('../fonts/coamei_b.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face{
+  font-family: dinosaur;
+  src: url('../fonts/dinosaur.eot');
+  src: url('../fonts/dinosaur.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/dinosaur.woff') format('woff'),
+       url('../fonts/dinosaur.ttf') format('truetype');
 }
 
 
@@ -195,7 +204,7 @@ ul.actions{
 
 body{
   background-image: url('../images/foto-margherita.jpg');
-  background-position: center left;
+  background-position: top left;
   background-repeat: no-repeat;
 }
 
@@ -203,15 +212,22 @@ header h1{
   color: rgb(19,155,140);
 }
 .article-body{
-  background-color: rgba(255, 255, 255, 0.8) ;
+  background-color: rgba(255, 255, 255, 0.4) ;
   display: inline-block;
   width: 80%;
   float: left;
   p{
     font-size: 13px;
     text-align: justify;
-    padding: 5%;
+    padding: 5% 5% 0 5%;
   }
+}
+
+.article-body p.home{
+  font-family: dinosaur;
+  font-size: 30px;
+  text-align: right;
+  color: #00a99d;
 }
 
 /* END ARTICLE BODY STYLES */
@@ -238,6 +254,15 @@ div.footer-in{
   margin-right: 1%;
 }
 
+div.footer-home{
+  background-image: url('../images/girandola_testo_grande.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  width: 98%;
+  height: 220px;
+  margin-top: -8%;
+  z-index: 200;
+}
 
 /* END FOOTER STYLES */
 
@@ -275,16 +300,37 @@ div.above-content{
   height: 0px;
 }
 
-.search{
+.search_wide{
   float: right;
   height: 40px;
   padding-top: 10px;
+  display: none;
   label {
     display: none;
   }
 }
 
+.search_narrow{
+  margin: auto 20% auto 3%;
+  // margin: auto 15%; 
+  label{
+    display: none;
+  }
+}
+
 /* END LANGUAGE WIDE MENU */
+
+/* START CREDITS STYLE */
+.credits{
+  float: right;
+  margin-right: 2%;
+  p{
+    font-size: 12px;
+  }
+}
+/* END CREDITS STYLE */
+
+
 
 /* ALLA MEDIA QUERIES START FROM HERE */
 
@@ -442,5 +488,20 @@ and (max-device-width : 568px) {
   }
   div.mod-languages_wide ul.lang-block{
     margin: 0% 3% 0% 0%;
+  }
+}
+
+@media screen and (min-width: 610px){
+  .search_wide{
+    display: block;
+  }
+  .search_narrow{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 470px){
+  .search_narrow{
+    margin: auto 25% auto 5%;
   }
 }
