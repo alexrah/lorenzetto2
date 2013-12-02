@@ -86,7 +86,7 @@ li {
       font-size: 13px;
       font-weight: 800;
       // text-shadow: 0 0 0 rgba(0, 0, 0, 1);
-      text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); 
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); 
       // @include single-text-shadow(0 0 1px rgba(0, 0, 0, 0.6));
       // @include single-text-shadow(rgba(0, 0, 0, 0.6) 0, 0, 1px);
     }
@@ -117,7 +117,10 @@ li.elements.item-133, li.elements.item-141, li.elements.item-142 {
 
 li.elements:hover{ border: 6px solid black; }
 li.elements.active{ border: 6px solid black; }
-li.elements.active a{ color: black; }
+li.elements.active a{
+  color: black;
+  text-shadow: 0 0 0px rgba(0, 0, 0, 0.6);
+  }
 li.elements.item-133 a:hover { top: 41px; }
 li.elements.item-133:hover {
   /* a{ top: 42px; } */
@@ -148,6 +151,7 @@ div.sidebar-menu-block{
           top: 20px;
           font-size: 9px;
           color: black;
+          text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         }
       }
     }
@@ -240,6 +244,8 @@ header h1{
 
 /* START FOOTER STYLES */
 
+._footer{ margin-right: 2%; }
+
 div.footer-out{
   background-image: url('../images/girandola_sfumata_testo.png');
   background-position: right top;
@@ -273,6 +279,25 @@ div.footer-home{
 }
 
 /* END FOOTER STYLES */
+
+/* START CREDITS STYLE */
+
+._credits{ margin-right: 2%; }
+
+.credits{
+  float: right;
+  // margin-right: 2%;
+  width: 160px;
+  p{
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+.home .credits{
+  margin-right: 2%;
+}
+/* END CREDITS STYLE */
 
 /* START LANGUAGE WIDE MENU */
 
@@ -327,23 +352,6 @@ div.above-content{
 }
 
 /* END LANGUAGE WIDE MENU */
-
-/* START CREDITS STYLE */
-.credits{
-  float: right;
-  // margin-right: 2%;
-  width: 160px;
-  p{
-    font-size: 12px;
-    text-align: right;
-  }
-}
-
-.home .credits{
-  margin-right: 2%;
-}
-/* END CREDITS STYLE */
-
 
 
 /* ALLA MEDIA QUERIES START FROM HERE */
