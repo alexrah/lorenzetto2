@@ -54,7 +54,7 @@
    font-weight: bold;
    // font-family: Arial;
    color: rgb(0,169,157);
-   line-height: 20px;
+   line-height: 16px;
    }
    p:last-child{
      font-size: 0.8em;   
@@ -220,7 +220,8 @@ ul.actions{
 body{
   /* background-image: url('../images/foto-margherita.jpg'); */
   /* background-position: bottom left; */
-  background-position: left 0px bottom -100px;
+  /* background-position: left 0px bottom -100px; */
+  background-position: left 0px top 55px;
   background-repeat: no-repeat;
 }
 
@@ -251,7 +252,12 @@ header h1{
 
 /* START FOOTER STYLES */
 
-._footer{ margin-right: 2%; }
+._footer{
+  margin-right: 1%;
+  margin-top: -11%;
+  height: 510px;
+
+  }
 
 div.footer-out{
   background-image: url('../images/girandola_sfumata_testo.png');
@@ -275,14 +281,14 @@ div.footer-in{
 }
 
 div.footer-home{
-  background-image: url('../images/girandola_testo_grande.png');
+  background-image: url('../images/sfondo_home2.png');
   background-position: right top;
   background-repeat: no-repeat;
-  background-size: 50%;
-  width: 98%;
-  height: 440px;
-  margin-top: -8%;
-  z-index: 200;
+  background-size: 64%;
+  /* width: 98%; */
+  height: 100%;
+  /* margin-top: -15%; */
+  /* z-index: 200; */
 }
 
 /* END FOOTER STYLES */
@@ -310,6 +316,7 @@ div.footer-home{
 
 .home .credits{
   margin-right: 2%;
+  /* margin-top: -200px; */
 }
 /* END CREDITS STYLE */
 
@@ -466,6 +473,10 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width:568px){
+  body{
+  background-image: url('../images/foto-margherita3.jpg');
+}
+
   ul.menu_main li.elements{ width: 82.8px; }
 }
 
@@ -558,9 +569,9 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width: 893px ){
   
-  body{
-  background-image: url('../images/foto-margherita.jpg');
-}
+/*   body{ */
+/*   background-image: url('../images/foto-margherita3.jpg'); */
+/* } */
 
   header h1{
     width: 65%;
@@ -570,10 +581,10 @@ and (max-device-width : 568px) {
   }
 
   .article-body{
-    width: 65%;
-    margin-top: -25%;
+    width: 75%;
+    margin-top: -21%;
     position: relative;
-    left: 30%;
+    left: 29%;
   }
   .actions{
     /* margin-top: -25%; */
