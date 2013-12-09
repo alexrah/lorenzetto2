@@ -54,7 +54,12 @@
    font-weight: bold;
    // font-family: Arial;
    color: rgb(0,169,157);
-  }
+   line-height: 20px;
+   }
+   p:last-child{
+     font-size: 0.8em;   
+   }
+  
 }
 
 #sidebar-text{
@@ -68,7 +73,7 @@
 li {
   list-style: none; 
 }
- li.elements{
+.menu_sidebar li.elements, .menu_main li.elements{
     /* width: 82.8px; */
     width: 92px;
     height: 77px;
@@ -93,7 +98,7 @@ li {
    }
 
 
-li.item-102, li.item-110, li.item-117, li.item-134{ 
+.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134{ 
   background-color: rgb(203,18,45);
   display: none;
 }
@@ -115,7 +120,7 @@ li.elements.item-133, li.elements.item-141, li.elements.item-142 {
 }
 
 
-li.elements:hover{ border: 6px solid black; }
+.menu_sidebar li.elements:hover, .menu_main li.elements:hover{ border: 6px solid black; }
 li.elements.active{ border: 6px solid black; }
 li.elements.active a{
   color: black;
@@ -140,10 +145,10 @@ div.sidebar-menu-block{
    
 .sidebar-menu{
   margin-bottom: 8px;
-    ul.menu{
+    ul.menu_sidebar{
       li.elements{
-        width: 52px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
         float: none;
         a{
           position: relative;
@@ -174,9 +179,9 @@ li.elements.item-128 {
 }
 li.item-129 { background-color: rgb(49, 197, 207); }
 
-ul.menu{
+ul.menu_main, ul.menu_sidebar{
   // margin: 5% 0% 1%;
-  margin: 4% auto 1%;
+  margin: 5% auto 1%;
   text-align: center;
 }
 
@@ -186,6 +191,7 @@ ul.menu{
 
 ul.actions{
   float: right;
+  /* width: 14%; */
   li{
   width: 45px;
   height: 45px;
@@ -212,8 +218,9 @@ ul.actions{
 /* START ARTICLE BODY STYLES */
 
 body{
-  background-image: url('../images/foto-margherita.jpg');
-  background-position: top left;
+  /* background-image: url('../images/foto-margherita.jpg'); */
+  /* background-position: bottom left; */
+  background-position: left 0px bottom -100px;
   background-repeat: no-repeat;
 }
 
@@ -228,7 +235,7 @@ header h1{
   p{
     font-size: 13px;
     text-align: justify;
-    padding: 5% 5% 0 5%;
+    padding: 0% 5% 0 5%;
   }
 }
 
@@ -251,7 +258,7 @@ div.footer-out{
   background-position: right top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 450px;
+  height: 420px;
   margin-right: 1%;
   /* margin-top: -250px; */
 
@@ -264,7 +271,7 @@ div.footer-in{
   float: right;
   height: 140px;
   // margin-right: 1%;
-  margin-top: 370px;
+  margin-top: 300px;
 }
 
 div.footer-home{
@@ -282,7 +289,14 @@ div.footer-home{
 
 /* START CREDITS STYLE */
 
-._credits{ margin-right: 2%; }
+._credits{
+  margin-right: 3%;
+  position: relative;
+  top: -30px;
+  a{
+    color: white;
+  }
+  }
 
 .credits{
   float: right;
@@ -354,6 +368,25 @@ div.above-content{
 /* END LANGUAGE WIDE MENU */
 
 
+/* MENU PRODOTTI */
+.menu_prodotti{
+  position: relative;
+  width: 95%;
+  left: 2%;
+  li.elements{
+}
+}
+
+/* MENU AZIENDA */
+.menu_azienda{
+    .item-163{
+      /* display: inline-block; */
+      /* margin-left: 2%; */
+    }
+
+}
+
+
 /* ALLA MEDIA QUERIES START FROM HERE */
 
 /* Retina iPad in portrait & landscape */
@@ -394,12 +427,16 @@ and (max-device-width : 568px) {
   #sidebar-text{
     margin-top: 5%;
   }
-  li.item-102, li.item-110, li.item-117, li.item-134 { display: inline-block; }
+  .menu_main{ 
+    li.item-102, li.item-110, li.item-117, li.item-134 { display: inline-block; }
+  }
+  .menu_main, .menu_sidebar{
   li.elements{
     margin: 1%;
     float: left;
     width: 82px;
-  }
+    }
+}
   #sidebar{ float: left;}
   /* ul.menu { margin: 9% auto 1%; } */
 
@@ -416,8 +453,10 @@ and (max-device-width : 568px) {
   li.elements{
     width: 86px;
   }
-  li.item-102{
-    display: inline-block;
+  .menu_main{
+    li.item-102{
+      display: inline-block;
+    }
   }
   div.sidebar-menu-block{
   margin-top: 80%;
@@ -427,15 +466,22 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width:568px){
-  li.elements{ width: 82.8px; }
+  ul.menu_main li.elements{ width: 82.8px; }
 }
 
 @media screen and (min-width: 641px) and (max-width: 893px){
+  header h1{
+    width: 65%;
+    margin-top: -15%;
+    position: relative;
+    left: 60%
+  }
+
   .article-body{
      width: 55%;
      position: relative;
      left: 38%;
-     margin-top: -18%;
+     /* margin-top: -18%; */
    } 
  }
 
@@ -448,8 +494,10 @@ and (max-device-width : 568px) {
 
 
 @media screen and (min-width: 768px) and (max-width: 1010px){
-  li.item-102, li.item-110, li.item-117, li.item-134{
-    display: none;
+  .menu_main{
+    li.item-102, li.item-110, li.item-117, li.item-134{
+      display: none;
+    }
   }
   #sidebar{
     /* height: 210px; */
@@ -457,11 +505,11 @@ and (max-device-width : 568px) {
   #sidebar-text{
     /* margin-top: 50%; */
   }
-  ul.menu { margin-top: 6%; }
+  ul.menu_main { margin-top: 6%; }
 }
 
 @media screen and (min-width: 480px) and (max-width: 760px){
-  ._menu ul.menu { margin: 9% auto 1%; }
+  ._menu ul.menu_main { margin: 9% auto 1%; }
 }
 
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
@@ -509,20 +557,57 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width: 893px ){
+  
+  body{
+  background-image: url('../images/foto-margherita.jpg');
+}
+
+  header h1{
+    width: 65%;
+    margin-top: -22%;
+    position: relative;
+    left: 30%
+  }
+
   .article-body{
     width: 65%;
-    margin-top: -25%;
+    /* margin-top: -25%; */
     position: relative;
     left: 30%;
   }
   .actions{
-    margin-top: -25%;
+    /* margin-top: -25%; */
+  }
+  ul.actions li{
+    display: inline-block;
+    margin: 0px 10px;
   }
   div.mod-languages_wide ul.lang-block{
     margin: 0% 3% 0% 0%;
   }
+
+ul.sigProClassic{
+  width: 70%;
+  position: relative;
+  left: 15%;
 }
 
+.menu_prodotti{
+  position: relative;
+  width: 70%;
+  left: 30%;
+  li.elements{
+    }
+  }
+.menu_azienda{
+  position: relative;
+  /* top: -150px; */
+  width: 70%;
+  left: 30%;
+  margin-left: 5px;
+}
+  
+}
 @media screen and (min-width: 610px){
   .search_wide{
     display: block;
