@@ -1,0 +1,552 @@
+@import "foundation";
+@import "normalize";
+@import "compass/css3";
+
+// @include font-face("coamei", font-files("../fonts/coamei_b.woff", woff, "../fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+@include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+
+@font-face {
+    font-family: coamei;
+    src: url('../fonts/coamei_b.eot');  /* fix IE not working with if ttf is the default format */
+    src: url('../fonts/coamei_b.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/coamei_b.woff') format('woff'),
+         url('../fonts/coamei_b.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+  font-family: dinosaur;
+  src: url('../fonts/dinosaur.eot');
+  src: url('../fonts/dinosaur.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/dinosaur.woff') format('woff'),
+       url('../fonts/dinosaur.ttf') format('truetype');
+}
+
+
+
+/* START SIDEBAR STYLE */
+
+#wrapper { text-align: center; }
+#sidebar{
+  /* background-image: url('../images/LOGO_Lorenzetto.png'), url('../images/prova_pixel_riciclata.jpg'); */
+  /* background-color: white; */
+  /* background-position: top center, left top; */
+  /* background-repeat: no-repeat, y-repeat; */
+  /* background-size: 100%; */
+  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclata.jpg') top left repeat-y;
+  background-size: 100%, 100%;
+  @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
+  position: relative;
+  display: inline-block;
+  padding: 1%;
+  margin: 2% 3% 1%;
+  // width: 275px;
+  width: 90%;
+  // height: 250px;
+  height: 30%;
+  border: 1px solid black;
+  // position: relative;
+  // float: left;
+  p{
+   margin: 0 auto; 
+   text-align: center;
+   font-weight: bold;
+   // font-family: Arial;
+   color: rgb(0,169,157);
+   line-height: 20px;
+   }
+   p:last-child{
+     font-size: 0.8em;   
+   }
+  
+}
+
+#sidebar-text{
+  margin: 5% auto 0;
+}
+
+/* END SIDEBAR STYLE */
+
+/* START MENU STYLE */
+
+li {
+  list-style: none; 
+}
+ li.elements{
+    /* width: 82.8px; */
+    width: 92px;
+    height: 77px;
+    text-align: center;
+    // margin: 2% 3% ;
+    margin: 0% 1% 1%;
+    position: relative;
+    display: inline-block;
+    border: 6px solid transparent;
+    a {
+      position: relative;
+      left: 0;
+      top: 41px;
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      // text-shadow: 0 0 0 rgba(0, 0, 0, 1);
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); 
+      // @include single-text-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+      // @include single-text-shadow(rgba(0, 0, 0, 0.6) 0, 0, 1px);
+    }
+   }
+
+
+li.item-102, li.item-110, li.item-117, li.item-134{ 
+  background-color: rgb(203,18,45);
+  display: none;
+}
+.item-103, .item-111, .item-118, .item-135{ background-color: rgb(235,106,66); }
+.item-104, .item-112, .item-119, .item-136{ background-color: rgb(242,185,54); }
+.item-105, .item-113, .item-120, .item-137{ background-color: rgb(133,189,97); }
+.item-106, .item-114, .item-121, .item-138{ background-color: rgb(0,171,164); }
+.item-107, .item-115, .item-122, .item-139{ background-color: rgb(83,142,180); }
+li.elements.item-133, li.elements.item-141, li.elements.item-142 { 
+  background-image: url("../images/pulsante_carrello_bianco.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 6px solid rgb(154,101,153);
+  /* border: 0px solid transparent; */
+  /* width: 88.8px; */
+  /* height: 83px; */
+  /* margin-top: 4px; */
+  /* a{ top: 48px; } */
+}
+
+
+li.elements:hover{ border: 6px solid black; }
+li.elements.active{ border: 6px solid black; }
+li.elements.active a{
+  color: black;
+  text-shadow: 0 0 0px rgba(0, 0, 0, 0.6);
+  }
+li.elements.item-133 a:hover { top: 41px; }
+li.elements.item-133:hover {
+  /* a{ top: 42px; } */
+}
+li.elements.item-133.active {
+  background-image: url('../images/pulsante_carrello_nero.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  a{ top: 42px; }
+}
+
+ /* START SIDEBAR MENU STYLES */
+
+div.sidebar-menu-block{
+  margin-top: 50%;
+}
+   
+.sidebar-menu{
+  margin-bottom: 8px;
+    ul.menu{
+      li.elements{
+        width: 52px;
+        height: 55px;
+        float: none;
+        a{
+          position: relative;
+          /* left: -3px; */
+          top: 20px;
+          font-size: 9px;
+          color: black;
+          text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        }
+      }
+    }
+  }
+
+hr{
+  background-color: black;
+  height: 1px;
+  width: 98%;
+  margin: auto;
+}
+
+
+ /* END SIDEBAR MENU STYLES */
+
+li.item-127 { background-color: rgb(116, 157, 211); }
+li.elements.item-128 {
+  background-color: rgb(107, 192, 101);
+  margin: auto 8%;
+}
+li.item-129 { background-color: rgb(49, 197, 207); }
+
+ul.menu{
+  // margin: 5% 0% 1%;
+  margin: 4% auto 1%;
+  text-align: center;
+}
+
+/* END MENU STYLE */
+
+/* START RIGHT ACTION MENU STYLES */
+
+ul.actions{
+  float: right;
+  li{
+  width: 45px;
+  height: 45px;
+  background-color: rgb(102,194,195);
+  margin: 20px auto;
+  a{
+    position: relative;
+    left: 0;
+    top: 12px;
+    text-transform: uppercase;
+    color: rgb(36,56,57);
+    font-size: 12px;
+    font-weight: bold;
+
+    }
+  }
+}
+.actions li.email a{
+  left: 3px;
+}
+
+/* END RIGHT ACTION MENU STYLES */
+
+/* START ARTICLE BODY STYLES */
+
+body{
+  background-image: url('../images/foto-margherita.jpg');
+  /* background-position: bottom left; */
+  background-position: left 0px bottom -100px;
+  background-repeat: no-repeat;
+}
+
+header h1{
+  color: rgb(19,155,140);
+}
+.article-body{
+  background-color: rgba(255, 255, 255, 0.8) ;
+  display: inline-block;
+  width: 80%;
+  float: left;
+  p{
+    font-size: 13px;
+    text-align: justify;
+    padding: 5% 5% 0 5%;
+  }
+}
+
+.article-body p.home{
+  font-family: dinosaur;
+  font-size: 30px;
+  text-align: right;
+  color: #00a99d;
+  width: 100%;
+}
+
+/* END ARTICLE BODY STYLES */
+
+/* START FOOTER STYLES */
+
+._footer{ margin-right: 2%; }
+
+div.footer-out{
+  background-image: url('../images/girandola_sfumata_testo.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 450px;
+  margin-right: 1%;
+  /* margin-top: -250px; */
+
+}
+
+div.footer-in{
+  background-image: url('../images/banca_fiorellino_fiori.png');
+  background-repeat: no-repeat;
+  width: 85%;
+  float: right;
+  height: 140px;
+  // margin-right: 1%;
+  margin-top: 370px;
+}
+
+div.footer-home{
+  background-image: url('../images/girandola_testo_grande.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 98%;
+  height: 440px;
+  margin-top: -8%;
+  z-index: 200;
+}
+
+/* END FOOTER STYLES */
+
+/* START CREDITS STYLE */
+
+._credits{
+  margin-right: 3%;
+  position: relative;
+  top: -20px;
+  a{
+    color: white;
+  }
+  }
+
+.credits{
+  float: right;
+  // margin-right: 2%;
+  width: 160px;
+  p{
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+.home .credits{
+  margin-right: 2%;
+}
+/* END CREDITS STYLE */
+
+/* START LANGUAGE WIDE MENU */
+
+div.mod-languages_wide{
+  width: 100%;
+  display: none;
+    ul.lang-block{
+    float: right;
+    // margin: 1% 3% 1% 0;
+    margin: 0% 6% 0% 0;
+    font-size: 20px;
+    .lang-active a{
+      border: 2px solid black;
+    }
+      li{
+        display: inline-block;
+      a{
+          color: black;
+          position: relative;
+          top: 5px;
+          left: 20px;
+          padding: 15%;
+          font-size: 13px;
+      }
+    }
+  }
+}
+
+div.mod-languages_narrow{
+  display: none;
+}
+div.above-content{
+  height: 0px;
+}
+
+.search_wide{
+  float: right;
+  height: 40px;
+  padding-top: 10px;
+  display: none;
+  label {
+    display: none;
+  }
+}
+
+.search_narrow{
+  margin: auto 20% auto 3%;
+  // margin: auto 15%; 
+  label{
+    display: none;
+  }
+}
+
+/* END LANGUAGE WIDE MENU */
+
+
+/* ALLA MEDIA QUERIES START FROM HERE */
+
+/* Retina iPad in portrait & landscape */
+
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  /* STYLES GO HERE */
+}
+
+// iPad mini in portrait & landscape
+
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+/* STYLES GO HERE */
+}
+
+// iPhone 5 in portrait & landscape
+
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+  li.elements {
+    // width: 90px;
+  }
+}
+
+@media screen and (min-width: 480px){
+  #sidebar{
+    width: 220px;
+    // height: 370px;
+  }
+  div.sidebar-menu-block{
+  /* margin-top: 100%; */
+  }
+
+  #sidebar-text{
+    margin-top: 5%;
+  }
+  li.item-102, li.item-110, li.item-117, li.item-134 { display: inline-block; }
+  li.elements{
+    margin: 1%;
+    float: left;
+    width: 82px;
+  }
+  #sidebar{ float: left;}
+  /* ul.menu { margin: 9% auto 1%; } */
+
+  .article-body{
+    width: 85%;
+    float: left;
+  }
+  div.mod-languages_wide{
+    display: block;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width: 568px){
+  li.elements{
+    width: 86px;
+  }
+  li.item-102{
+    display: inline-block;
+  }
+  div.sidebar-menu-block{
+  margin-top: 80%;
+  }
+
+
+}
+
+@media screen and (min-width:568px){
+  li.elements{ width: 82.8px; }
+}
+
+@media screen and (min-width: 641px) and (max-width: 893px){
+  .article-body{
+     width: 55%;
+     position: relative;
+     left: 38%;
+     margin-top: -18%;
+   } 
+ }
+
+
+@media screen and (min-width: 655px) and (max-width: 890px){
+  // #sidebar{ height: 225px; }
+  // #sidebar-text{ margin-top: 55%; }
+  // div.sidebar-menu-block{ display: none; }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1010px){
+  li.item-102, li.item-110, li.item-117, li.item-134{
+    display: none;
+  }
+  #sidebar{
+    /* height: 210px; */
+  }
+  #sidebar-text{
+    /* margin-top: 50%; */
+  }
+  ul.menu { margin-top: 6%; }
+}
+
+@media screen and (min-width: 480px) and (max-width: 760px){
+  ._menu ul.menu { margin: 9% auto 1%; }
+}
+
+/* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
+/* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
+
+@media screen and (min-width: 480px) and (max-width: 560px){
+  #sidebar{ height: 390px; }
+  /* #sidebar-text{ margin-top: 125%; } */
+}
+@media screen and (min-width: 560px) and (max-width: 655px){ 
+  /* #sidebar{ height: 300px; } */
+  #sidebar-text{ margin-top: 0%; }
+  div.sidebar-menu-block{ margin-top: 50%; }
+}
+
+@media screen and (max-width: 479px){
+  div.mod-languages_narrow{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: 160px;
+    left: 3px;
+      ul.lang-block{
+      float: right;
+      margin: 1% 3% 1% 0;
+      font-size: 20px;
+      .lang-active a{
+        border: 2px solid black;
+      }
+        li{
+          // display: inline-block;
+        a{
+           color: black;
+           position: relative;
+           top: 5px;
+           left: 5px;
+           padding: 15%;
+           font-size: 13px;
+         }
+        }
+     }
+   }
+  div.sidebar-menu-block{ margin-top: 50%; }
+
+}
+
+@media screen and (min-width: 893px ){
+  .article-body{
+    width: 65%;
+    margin-top: -25%;
+    position: relative;
+    left: 30%;
+  }
+  .actions{
+    margin-top: -25%;
+  }
+  div.mod-languages_wide ul.lang-block{
+    margin: 0% 3% 0% 0%;
+  }
+}
+
+@media screen and (min-width: 610px){
+  .search_wide{
+    display: block;
+  }
+  .search_narrow{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 470px){
+  .search_narrow{
+    margin: auto 25% auto 5%;
+  }
+}
