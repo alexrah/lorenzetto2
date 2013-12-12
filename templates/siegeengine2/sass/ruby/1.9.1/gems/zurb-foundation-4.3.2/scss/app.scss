@@ -2,6 +2,14 @@
 @import "normalize";
 @import "compass/css3";
 
+
+/** VARIABLES */
+
+$bluemarine: rgb(0,169,157);
+
+
+/** FONTS */
+
 // @include font-face("coamei", font-files("../fonts/coamei_b.woff", woff, "../fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
 @include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
 
@@ -214,13 +222,13 @@ ul.actions{
       background-image: url('../images/icon-pdf-white.png');
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: 50%;
+      background-size: 60%;
    }
    li.email{
-      background-image: url('../images/icon-mail-white.svg'); 
+      background-image: url('../images/email_icon.png'); 
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: 95%;
+      background-size: 70%;
    }
   
 }
@@ -235,7 +243,7 @@ ul.actions{
 body{
   /* background-image: url('../images/foto-margherita.jpg'); */
   /* background-position: bottom left; */
-  background-position: left 0px bottom -100px;
+  background-position: left 0px top 55px;
   background-repeat: no-repeat;
 }
 
@@ -264,11 +272,11 @@ header h1{
 
 /* END ARTICLE BODY STYLES */
 
-/** START FOOTER STYLES */
+/** FOOTER STYLES */
 
 ._footer{
   margin-right: 2%;
-  margin-top: -12%;
+  /* margin-top: -12%; */
   }
 
 div.footer-out{
@@ -286,14 +294,15 @@ div.footer-in{
   /* background-image: url('../images/banca_fiorellino_fiori.png'); */
   background-image: url('../images/sfondo_pagine_banda.png');
   background-repeat: no-repeat;
-  /* width: 85%; */
-  width: 80%;
+  background-position: right bottom;
+  width: 100%;
+  /* width: 80%; */
   float: right;
-  /* height: 140px; */
-  height: 540px;
+  height: 140px;
+  /* height: 540px; */
   /* margin-right: 1%; */
   margin-right: -2%;
-  /* margin-top: 300px; */
+  margin-top: 2.5%;
 }
 
 div.footer-home{
@@ -312,11 +321,12 @@ div.footer-home{
 /** CREDITS STYLE */
 
 ._credits{
-  /* margin-right: 3%; */
+  margin-right: 1%;
   position: relative;
-  /* top: -30px; */
-  right: -77%;
-  margin-top: 49%;
+  top: -25px;
+  /* top: 135px; */
+  /* right: -77%; */
+  /* margin-top: 49%; */
   a{
     color: white;
   }
@@ -397,7 +407,10 @@ div.above-content{
   position: relative;
   width: 95%;
   left: 2%;
-  li.elements{
+  @include column-count(3);
+  @include column-gap(20px);
+  li.elements a{
+    color: $bluemarine;
 }
 }
 
@@ -484,6 +497,7 @@ and (max-device-width : 568px) {
   }
   div.sidebar-menu-block{
   margin-top: 80%;
+  font: normal normal 
   }
 
 
@@ -620,7 +634,8 @@ ul.sigProClassic{
 .menu_prodotti{
   position: relative;
   width: 70%;
-  left: 30%;
+  left: 34%;
+  margin-bottom: 16.4%;
   li.elements{
     }
   }
