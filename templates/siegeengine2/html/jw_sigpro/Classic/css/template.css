@@ -12,11 +12,21 @@ table.contentpaneopen { width:100%; }
 li.sigProClear { clear:both; float:none!important; height:0!important; line-height:0!important; border:none!important; background:none!important; width:auto; margin:0!important; padding:0!important; }
 
 /* Container */
-ul.sigProClassic { margin:8px auto!important; padding:8px 0!important; list-style:none; clear:both; overflow:hidden; }
+ul.sigProClassic {
+  margin:8px auto!important; padding:8px 0!important;
+  list-style:none; clear:both; overflow:hidden;
+  text-align: center;  
+}
 	ul.sigProClassic.singleThumbGallery { margin:0!important; padding:8px 0!important; list-style:none!important; float:left; }
 
 /* Thumbnail */
-ul.sigProClassic li.sigProThumb { float:left; background:#fff!important; margin:5px; padding:0; list-style:none!important; }
+ul.sigProClassic li.sigProThumb {
+  /* float:left; */
+  background:#fff!important;
+  margin:5px; padding:0;
+  list-style:none!important;
+  display: inline-block;
+}
 
 /* width:33%; to force columns */
 ul.sigProClassic li.sigProThumb span.sigProLinkOuterWrapper { display:block; float:left; margin:0;

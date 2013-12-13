@@ -47,7 +47,7 @@ $bluemarine: rgb(0,169,157);
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
   display: inline-block;
-  padding: 1%;
+  /* padding: 1%; */
   margin: 2% 3% 1%;
   // width: 275px;
   width: 90%;
@@ -66,6 +66,11 @@ $bluemarine: rgb(0,169,157);
    }
    p:last-child{
      font-size: 0.8em;   
+   }
+   #link{
+    display: block;
+    height: 120px; margin-bottom: -100px;
+    text-indent: -2000px;
    }
   
 }
@@ -197,14 +202,15 @@ hr{
 
  /* END SIDEBAR MENU STYLES */
 
-/** RIGHT ACTION MENU STYLES */
+/** ACTION MENU STYLES */
 
 ul.actions{
   float: right;
+  margin-top: 7px;
   /* width: 14%; */
   li{
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background-color: rgb(102,194,195);
   margin: 20px auto;
   a{
@@ -225,10 +231,10 @@ ul.actions{
       background-size: 60%;
    }
    li.email{
-      background-image: url('../images/email_icon.png'); 
+      background-image: url('../images/email_icon.svg'); 
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: 70%;
+      background-size: 80%;
    }
   
 }
@@ -243,7 +249,8 @@ ul.actions{
 body{
   /* background-image: url('../images/foto-margherita.jpg'); */
   /* background-position: bottom left; */
-  background-position: left 0px top 55px;
+  /* background-position: left 0px top 55px; */
+  background-position: left bottom;
   background-repeat: no-repeat;
 }
 
@@ -302,7 +309,8 @@ div.footer-in{
   /* height: 540px; */
   /* margin-right: 1%; */
   margin-right: -2%;
-  margin-top: 2.5%;
+  /* margin-top: 2.5%; */
+  margin-bottom: -20px;
 }
 
 div.footer-home{
@@ -323,7 +331,7 @@ div.footer-home{
 ._credits{
   margin-right: 1%;
   position: relative;
-  top: -25px;
+  /* top: -25px; */
   /* top: 135px; */
   /* right: -77%; */
   /* margin-top: 49%; */
@@ -339,6 +347,7 @@ div.footer-home{
   p{
     font-size: 12px;
     text-align: right;
+    margin-bottom: 0px;
   }
 }
 
@@ -407,6 +416,7 @@ div.above-content{
   position: relative;
   width: 95%;
   left: 2%;
+  margin: auto 3%;
   @include column-count(3);
   @include column-gap(20px);
   li.elements a{
@@ -416,6 +426,7 @@ div.above-content{
 
 /** MENU AZIENDA */
 .menu_azienda{
+  margin: auto  5%;
     .item-163{
       /* display: inline-block; */
       /* margin-left: 2%; */
@@ -531,7 +542,7 @@ and (max-device-width : 568px) {
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1010px){
+@media screen and (min-width: 768px) and (max-width: 1014px){
   .menu_main{
     li.item-102, li.item-110, li.item-117, li.item-134{
       display: none;
@@ -554,12 +565,12 @@ and (max-device-width : 568px) {
 /* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
 
 @media screen and (min-width: 480px) and (max-width: 560px){
-  #sidebar{ height: 390px; }
+  /* #sidebar{ height: 390px; } */
   /* #sidebar-text{ margin-top: 125%; } */
 }
 @media screen and (min-width: 560px) and (max-width: 655px){ 
   /* #sidebar{ height: 300px; } */
-  #sidebar-text{ margin-top: 0%; }
+  #sidebar-text{ margin-top: 5%; }
   div.sidebar-menu-block{ margin-top: 50%; }
 }
 
@@ -603,7 +614,7 @@ and (max-device-width : 568px) {
 
   header h1{
     width: 65%;
-    margin-top: -22%;
+    margin-top: -21%;
     position: relative;
     left: 30%
   }
@@ -635,7 +646,8 @@ ul.sigProClassic{
   position: relative;
   width: 70%;
   left: 34%;
-  margin-bottom: 16.4%;
+  margin: 0;
+  /* margin-bottom: 16.4%; */
   li.elements{
     }
   }
@@ -644,7 +656,7 @@ ul.sigProClassic{
   /* top: -150px; */
   width: 70%;
   left: 30%;
-  margin-left: 5px;
+  margin-left: 18px;
 }
   
 }
