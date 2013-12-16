@@ -20,10 +20,10 @@ $info = $this->item->params->get('info_block_position', 0);
 	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 			<ul class="actions">
 				<?php if ($params->get('show_print_icon')) : ?>
-					<li class="print-icon"> <?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?> </li>
+					<li class="print"> <?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?> </li>
 				<?php endif; ?>
 				<?php if ($params->get('show_email_icon')) : ?>
-					<li class="email-icon"> <?php echo JHtml::_('icon.email',  $this->item, $params); ?> </li>
+					<li class="email"> <?php echo JHtml::_('icon.email',  $this->item, $params); ?> </li>
 				<?php endif; ?>
 				<?php if ($canEdit) : ?>
 					<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>

@@ -47,7 +47,7 @@ $bluemarine: rgb(0,169,157);
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
   display: inline-block;
-  /* padding: 1%; */
+  padding: 1%;
   margin: 2% 3% 1%;
   // width: 275px;
   width: 90%;
@@ -62,7 +62,8 @@ $bluemarine: rgb(0,169,157);
    font-weight: bold;
    // font-family: Arial;
    color: rgb(0,169,157);
-   line-height: 20px;
+   line-height: 18px;
+   font-size: 0.9em;
    }
    p:last-child{
      font-size: 0.8em;   
@@ -98,10 +99,10 @@ li {
     border: 6px solid transparent;
     a {
       position: relative;
-      left: 0;
+      left: 1px;
       top: 41px;
       color: white;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       // text-shadow: 0 0 0 rgba(0, 0, 0, 1);
       text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); 
@@ -265,7 +266,7 @@ header h1{
   p{
     font-size: 13px;
     text-align: justify;
-    padding: 0% 5% 0 5%;
+    /* padding: 0% 5% 0 5%; */
   }
 }
 
@@ -499,7 +500,7 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width:480px) and (max-width: 568px){
   li.elements{
-    width: 86px;
+    /* width: 86px; */
   }
   .menu_main{
     li.item-102{
@@ -529,7 +530,7 @@ and (max-device-width : 568px) {
   .article-body{
      width: 55%;
      position: relative;
-     left: 38%;
+     left: 39%;
      /* margin-top: -18%; */
    } 
  }
@@ -620,10 +621,11 @@ and (max-device-width : 568px) {
   }
 
   .article-body{
-    width: 65%;
+    width: 70%;
     /* margin-top: -25%; */
     position: relative;
-    left: 30%;
+    left: 28.5%;
+    background: url('../images/girandola_sfumata.png') no-repeat right top;
   }
   .actions{
     /* margin-top: -25%; */
@@ -637,10 +639,18 @@ and (max-device-width : 568px) {
   }
 
 ul.sigProClassic{
-  width: 70%;
+  width: 73%;
   position: relative;
-  left: 15%;
-}
+  left: 13.6%;
+  }
+
+  ul.sigProClassic li:nth-child(2){ margin: 9px 24px; }
+  ul.sigProClassic li:nth-child(1){ margin: 9px 0px; }
+  ul.sigProClassic li:nth-child(3){ margin: 9px 0px; }
+
+
+
+
 
 .menu_prodotti{
   position: relative;
@@ -655,7 +665,7 @@ ul.sigProClassic{
   position: relative;
   /* top: -150px; */
   width: 70%;
-  left: 30%;
+  left: 27.2%;
   margin-left: 18px;
 }
   
