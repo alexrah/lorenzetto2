@@ -108,6 +108,7 @@
 }
 
 .fancybox-nav {
+  display: none;
 	position: absolute;
 	top: 0;
 	width: 40%;
@@ -192,7 +193,8 @@
 /* Title helper */
 
 .fancybox-title {
-	visibility: hidden;
+  display: none;
+	/* visibility: hidden; */
 	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
 	text-shadow: none;

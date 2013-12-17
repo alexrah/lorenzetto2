@@ -31,7 +31,13 @@ $bluemarine: rgb(0,169,157);
        url('../fonts/dinosaur.ttf') format('truetype');
 }
 
-
+/** CSS TRICKS -> BACKGROUND IMAGES LINK */
+   #link{
+    display: block;
+    min-height: 100%; 
+    text-indent: -2000px;
+   }
+ 
 
 /** SIDEBAR STYLE */
 
@@ -207,7 +213,7 @@ hr{
 
 ul.actions{
   float: right;
-  margin-top: 7px;
+  margin-top: 4px;
   /* width: 14%; */
   li{
   width: 35px;
@@ -222,7 +228,8 @@ ul.actions{
     color: rgb(36,56,57);
     font-size: 12px;
     font-weight: bold;
-    display: none;
+    display: block;
+    text-indent: -2000px
     }
   }
    li.print{
@@ -282,13 +289,13 @@ header h1{
 
 /** FOOTER STYLES */
 
-._footer{
-  margin-right: 2%;
+/* ._footer{ */
+  /* margin-right: 2%; */
   /* margin-top: -12%; */
-  }
+  /* } */
 
 div.footer-out{
-  background-image: url('../images/girandola_sfumata_testo.png');
+  background-image: url('../images/girandola_sfumata_testo.png') ;
   background-position: right top;
   background-repeat: no-repeat;
   width: 100%;
@@ -298,21 +305,33 @@ div.footer-out{
 
 }
 
+/* div.footer-in{ */
+/*   background-image: url('../images/banca_fiorellino_fiori.png'); */
+/*   background-image: url('../images/sfondo_pagine_banda.png'); */
+/*   background-repeat: no-repeat; */
+/*   background-position: right bottom; */
+/*   width: 100%; */
+/*   /* width: 80%; */ 
+/*   float: right; */
+/*   height: 140px; */
+/*   /* height: 540px; */ 
+/*   /* margin-right: 1%; */ 
+/*   margin-right: -2%; */
+/*   /* margin-top: 2.5%; */ 
+/*   margin-bottom: -20px; */
+/* } */
+
 div.footer-in{
-  /* background-image: url('../images/banca_fiorellino_fiori.png'); */
-  background-image: url('../images/sfondo_pagine_banda.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
+  background: url('../images/sfondo_pagine_banda.png') no-repeat left 215px bottom, url('../images/foto-margherita.jpg') no-repeat left bottom ;
+  position: fixed;
+  bottom: 20px;
   width: 100%;
-  /* width: 80%; */
-  float: right;
   height: 140px;
-  /* height: 540px; */
-  /* margin-right: 1%; */
-  margin-right: -2%;
-  /* margin-top: 2.5%; */
-  margin-bottom: -20px;
+  min-height: 100%;
+  margin: 0px -2% -20px 0px;
+
 }
+
 
 div.footer-home{
   background-image: url('../images/girandola_testo_grande.png');
@@ -330,8 +349,18 @@ div.footer-home{
 /** CREDITS STYLE */
 
 ._credits{
-  margin-right: 1%;
-  position: relative;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  /* right: 220px; */
+  /* right: 20%; */
+}
+
+
+._credits{
+  /* margin-right: 1%; */
+  /* position: relative; */
+
   /* top: -25px; */
   /* top: 135px; */
   /* right: -77%; */
@@ -344,7 +373,8 @@ div.footer-home{
 .credits{
   float: right;
   // margin-right: 2%;
-  width: 160px;
+  /* width: 160px; */
+  width: 490px;
   p{
     font-size: 12px;
     text-align: right;
@@ -605,16 +635,22 @@ and (max-device-width : 568px) {
    }
   div.sidebar-menu-block{ margin-top: 50%; }
 
+  div.footer-in{
+    
+  background: url('../images/sfondo_pagine_banda.png') no-repeat left 50px bottom;
+  }
+
 }
 
 @media screen and (min-width: 893px ){
   
   body{
-  background-image: url('../images/foto-margherita.jpg');
+  /* background-image: url('../images/foto-margherita.jpg'); */
+    /* background: url('../images/foto-margherita.jpg') no-repeat left bottom scroll; */
 }
 
   header h1{
-    width: 65%;
+    width: 55%;
     margin-top: -21%;
     position: relative;
     left: 30%
@@ -625,7 +661,7 @@ and (max-device-width : 568px) {
     /* margin-top: -25%; */
     position: relative;
     left: 28.5%;
-    background: url('../images/girandola_sfumata.png') no-repeat right top;
+    /* background: url('../images/girandola_sfumata.png') no-repeat right top; */
   }
   .actions{
     /* margin-top: -25%; */
@@ -638,16 +674,17 @@ and (max-device-width : 568px) {
     margin: 0% 3% 0% 0%;
   }
 
-ul.sigProClassic{
-  width: 73%;
-  position: relative;
-  left: 13.6%;
-  }
+._azienda{
+  ul.sigProClassic{
+    width: 73%;
+    position: relative;
+    left: 13.6%;
+    }
 
   ul.sigProClassic li:nth-child(2){ margin: 9px 24px; }
   ul.sigProClassic li:nth-child(1){ margin: 9px 0px; }
   ul.sigProClassic li:nth-child(3){ margin: 9px 0px; }
-
+}
 
 
 
