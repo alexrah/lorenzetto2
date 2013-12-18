@@ -256,7 +256,7 @@ header h1{
 ._footer{
   margin-right: 1%;
   margin-top: -11%;
-  height: 510px;
+  height: 110px;
 
   }
 
@@ -282,14 +282,18 @@ div.footer-in{
 }
 
 div.footer-home{
-  background-image: url('../images/sfondo_home2.png');
-  background-position: right top 20px; 
-  background-repeat: no-repeat;
+  background: url('../images/sfondo_home2.png') no-repeat right bottom, url('../images/foto-margherita.jpg') no-repeat left bottom;
+  /* background-position: right top 20px;  */
+  /* background-repeat: no-repeat; */
   /* background-size: 64%; */
   /* width: 98%; */
-  height: 104%;
+  /* height: 104%; */
+  bottom: 0px;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
   /* margin-top: -15%; */
-  /* z-index: 200; */
+  z-index: -200;
 }
 
 /* END FOOTER STYLES */
@@ -318,6 +322,13 @@ div.footer-home{
 .home .credits{
   margin-right: 2%;
   /* margin-top: -200px; */
+  position: fixed;
+  bottom: -15px;
+  right: 0px;
+  /* left: 50%; */
+  width: 500px;
+  /* margin-right: 25%; */
+
 }
 /* END CREDITS STYLE */
 
@@ -475,7 +486,7 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width:568px){
   body{
-  background-image: url('../images/foto-margherita3.jpg');
+  /* background-image: url('../images/foto-margherita3.jpg'); */
 }
 
   ul.menu_main li.elements{ width: 82.8px; }
@@ -566,7 +577,7 @@ and (max-device-width : 568px) {
    }
   div.sidebar-menu-block{ margin-top: 50%; }
  ._footer{
-    height: 280px;
+    height: 40px;
   }
 
 }
@@ -642,4 +653,18 @@ ul.sigProClassic{
   div.footer-home{
     background-size: 100%;
   }
+}
+
+@media screen and (min-width: 1050px){
+  div.footer-home{
+    background-position: left 400px bottom, left bottom;
+  }
+  .home .credits{
+    left: 50%;
+  }
+}
+
+@media screen and (max-height: 500px){
+  .footer-home{ display: none; }
+  .credits{ display: none; }
 }

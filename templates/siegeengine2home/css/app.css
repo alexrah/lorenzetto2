@@ -7611,7 +7611,7 @@ header h1 {
 ._footer {
   margin-right: 1%;
   margin-top: -11%;
-  height: 510px;
+  height: 110px;
 }
 
 /* line 263, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
@@ -7637,68 +7637,78 @@ div.footer-in {
 
 /* line 284, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.footer-home {
-  background-image: url("../images/sfondo_home2.png");
-  background-position: right top 20px;
-  background-repeat: no-repeat;
+  background: url("../images/sfondo_home2.png") no-repeat right bottom, url("../images/foto-margherita.jpg") no-repeat left bottom;
+  /* background-position: right top 20px;  */
+  /* background-repeat: no-repeat; */
   /* background-size: 64%; */
   /* width: 98%; */
-  height: 104%;
+  /* height: 104%; */
+  bottom: 0px;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
   /* margin-top: -15%; */
-  /* z-index: 200; */
+  z-index: -200;
 }
 
 /* END FOOTER STYLES */
 /* START CREDITS STYLE */
-/* line 299, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 303, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 ._credits {
   margin-right: 3%;
   position: relative;
   top: -30px;
 }
-/* line 303, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 307, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 ._credits a {
   color: white;
 }
 
-/* line 308, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 312, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .credits {
   float: right;
   width: 160px;
 }
-/* line 312, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 316, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .credits p {
   font-size: 12px;
   text-align: right;
 }
 
-/* line 318, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 322, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .home .credits {
   margin-right: 2%;
   /* margin-top: -200px; */
+  position: fixed;
+  bottom: -15px;
+  right: 0px;
+  /* left: 50%; */
+  width: 500px;
+  /* margin-right: 25%; */
 }
 
 /* END CREDITS STYLE */
 /* START LANGUAGE WIDE MENU */
-/* line 326, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 337, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_wide {
   width: 100%;
   display: none;
 }
-/* line 329, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 340, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_wide ul.lang-block {
   float: right;
   margin: 0% 6% 0% 0;
   font-size: 20px;
 }
-/* line 334, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 345, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_wide ul.lang-block .lang-active a {
   border: 2px solid black;
 }
-/* line 337, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 348, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_wide ul.lang-block li {
   display: inline-block;
 }
-/* line 339, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 350, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_wide ul.lang-block li a {
   color: black;
   position: relative;
@@ -7708,40 +7718,40 @@ div.mod-languages_wide ul.lang-block li a {
   font-size: 13px;
 }
 
-/* line 351, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 362, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.mod-languages_narrow {
   display: none;
 }
 
-/* line 354, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 365, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.above-content {
   height: 0px;
 }
 
-/* line 358, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 369, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .search_wide {
   float: right;
   height: 40px;
   padding-top: 10px;
   display: none;
 }
-/* line 363, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 374, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .search_wide label {
   display: none;
 }
 
-/* line 368, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 379, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .search_narrow {
   margin: auto 20% auto 3%;
 }
-/* line 371, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 382, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .search_narrow label {
   display: none;
 }
 
 /* END LANGUAGE WIDE MENU */
 /* MENU PRODOTTI */
-/* line 380, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 391, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .menu_prodotti {
   position: relative;
   width: 95%;
@@ -7749,7 +7759,7 @@ div.above-content {
 }
 
 /* MENU AZIENDA */
-/* line 390, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+/* line 401, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 .menu_azienda .item-163 {
   /* display: inline-block; */
   /* margin-left: 2%; */
@@ -7767,79 +7777,79 @@ div.above-content {
   /* STYLES GO HERE */
 }
 @media screen and (min-width: 480px) {
-  /* line 427, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 438, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar {
     width: 220px;
   }
 
-  /* line 431, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 442, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.sidebar-menu-block {
     /* margin-top: 100%; */
   }
 
-  /* line 435, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 446, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar-text {
     margin-top: 5%;
   }
 
-  /* line 439, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 450, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134 {
     display: inline-block;
   }
 
-  /* line 442, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 453, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_main li.elements, .menu_sidebar li.elements {
     margin: 1%;
     float: left;
     width: 82px;
   }
 
-  /* line 448, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 459, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar {
     float: left;
   }
 
   /* ul.menu { margin: 9% auto 1%; } */
-  /* line 451, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 462, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .article-body {
     width: 85%;
     float: left;
   }
 
-  /* line 455, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 466, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_wide {
     display: block;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 568px) {
-  /* line 461, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 472, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   li.elements {
     width: 86px;
   }
 
-  /* line 465, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 476, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_main li.item-102 {
     display: inline-block;
   }
 
-  /* line 469, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 480, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.sidebar-menu-block {
     margin-top: 80%;
   }
 }
 @media screen and (min-width: 568px) {
-  /* line 477, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 488, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   body {
-    background-image: url("../images/foto-margherita3.jpg");
+    /* background-image: url('../images/foto-margherita3.jpg'); */
   }
 
-  /* line 481, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 492, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ul.menu_main li.elements {
     width: 82.8px;
   }
 }
 @media screen and (min-width: 641px) and (max-width: 893px) {
-  /* line 485, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 496, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   header h1 {
     width: 65%;
     margin-top: -15%;
@@ -7847,7 +7857,7 @@ div.above-content {
     left: 60%;
   }
 
-  /* line 492, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 503, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .article-body {
     width: 55%;
     position: relative;
@@ -7856,28 +7866,28 @@ div.above-content {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1010px) {
-  /* line 510, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 521, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134 {
     display: none;
   }
 
-  /* line 514, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 525, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar {
     /* height: 210px; */
   }
 
-  /* line 517, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 528, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar-text {
     /* margin-top: 50%; */
   }
 
-  /* line 520, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 531, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ul.menu_main {
     margin-top: 6%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 760px) {
-  /* line 524, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 535, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ._menu ul.menu_main {
     margin: 9% auto 1%;
   }
@@ -7885,7 +7895,7 @@ div.above-content {
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
 /* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
 @media screen and (min-width: 480px) and (max-width: 560px) {
-  /* line 531, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 542, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar {
     height: 390px;
   }
@@ -7894,18 +7904,18 @@ div.above-content {
 }
 @media screen and (min-width: 560px) and (max-width: 655px) {
   /* #sidebar{ height: 300px; } */
-  /* line 536, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 547, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   #sidebar-text {
     margin-top: 0%;
   }
 
-  /* line 537, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 548, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.sidebar-menu-block {
     margin-top: 50%;
   }
 }
 @media screen and (max-width: 479px) {
-  /* line 541, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 552, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_narrow {
     width: 100%;
     display: inline-block;
@@ -7913,17 +7923,17 @@ div.above-content {
     top: 160px;
     left: 3px;
   }
-  /* line 547, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 558, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_narrow ul.lang-block {
     float: right;
     margin: 1% 3% 1% 0;
     font-size: 20px;
   }
-  /* line 551, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 562, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_narrow ul.lang-block .lang-active a {
     border: 2px solid black;
   }
-  /* line 556, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 567, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_narrow ul.lang-block li a {
     color: black;
     position: relative;
@@ -7933,21 +7943,21 @@ div.above-content {
     font-size: 13px;
   }
 
-  /* line 567, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 578, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.sidebar-menu-block {
     margin-top: 50%;
   }
 
-  /* line 568, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 579, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ._footer {
-    height: 280px;
+    height: 40px;
   }
 }
 @media screen and (min-width: 893px) {
   /*   body{ */
   /*   background-image: url('../images/foto-margherita3.jpg'); */
   /* } */
-  /* line 580, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 591, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   header h1 {
     width: 65%;
     margin-top: -22%;
@@ -7955,7 +7965,7 @@ div.above-content {
     left: 30%;
   }
 
-  /* line 587, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 598, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .article-body {
     width: 75%;
     margin-top: -21%;
@@ -7963,37 +7973,37 @@ div.above-content {
     left: 29%;
   }
 
-  /* line 593, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 604, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .actions {
     /* margin-top: -25%; */
   }
 
-  /* line 596, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 607, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ul.actions li {
     display: inline-block;
     margin: 0px 10px;
   }
 
-  /* line 600, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 611, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.mod-languages_wide ul.lang-block {
     margin: 0% 3% 0% 0%;
   }
 
-  /* line 604, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 615, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   ul.sigProClassic {
     width: 70%;
     position: relative;
     left: 15%;
   }
 
-  /* line 610, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 621, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_prodotti {
     position: relative;
     width: 70%;
     left: 30%;
   }
 
-  /* line 617, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 628, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .menu_azienda {
     position: relative;
     /* top: -150px; */
@@ -8003,25 +8013,47 @@ div.above-content {
   }
 }
 @media screen and (min-width: 610px) {
-  /* line 627, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 638, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .search_wide {
     display: block;
   }
 
-  /* line 630, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 641, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .search_narrow {
     display: none;
   }
 }
 @media screen and (max-width: 470px) {
-  /* line 636, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 647, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .search_narrow {
     margin: auto 25% auto 5%;
   }
 }
 @media screen and (max-width: 720px) {
-  /* line 642, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  /* line 653, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   div.footer-home {
     background-size: 100%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  /* line 659, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  div.footer-home {
+    background-position: left 400px bottom, left bottom;
+  }
+
+  /* line 662, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  .home .credits {
+    left: 50%;
+  }
+}
+@media screen and (max-height: 500px) {
+  /* line 668, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  .footer-home {
+    display: none;
+  }
+
+  /* line 669, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  .credits {
+    display: none;
   }
 }

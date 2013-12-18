@@ -322,13 +322,14 @@ div.footer-out{
 /* } */
 
 div.footer-in{
-  background: url('../images/sfondo_pagine_banda.png') no-repeat left 215px bottom, url('../images/foto-margherita.jpg') no-repeat left bottom ;
+  background: url('../images/sfondo_pagine_banda.png') no-repeat left 150px bottom, url('../images/foto-margherita.jpg') no-repeat left bottom ;
   position: fixed;
   bottom: 20px;
   width: 100%;
   height: 140px;
   min-height: 100%;
   margin: 0px -2% -20px 0px;
+  z-index: -200;
 
 }
 
@@ -349,21 +350,20 @@ div.footer-home{
 /** CREDITS STYLE */
 
 ._credits{
-  position: fixed;
-  bottom: 0px;
-  left: 50%;
   /* right: 220px; */
   /* right: 20%; */
 }
 
 
 ._credits{
-  /* margin-right: 1%; */
+  position: fixed;
+  bottom: 0px;
+  margin-right: 2%;
   /* position: relative; */
 
   /* top: -25px; */
   /* top: 135px; */
-  /* right: -77%; */
+  right: 0;
   /* margin-top: 49%; */
   a{
     color: white;
@@ -452,7 +452,11 @@ div.above-content{
   @include column-gap(20px);
   li.elements a{
     color: $bluemarine;
-}
+  }
+  li.elements.active {
+    border: none;
+    a{ color: black; }
+  }
 }
 
 /** MENU AZIENDA */
@@ -462,6 +466,14 @@ div.above-content{
       /* display: inline-block; */
       /* margin-left: 2%; */
     }
+    li.elements a{
+      color: $bluemarine;
+    }
+    li.elements.active {
+      border: none;
+    a{ color: black; }
+  }
+
 
 }
 
@@ -694,7 +706,7 @@ and (max-device-width : 568px) {
   width: 70%;
   left: 34%;
   margin: 0;
-  /* margin-bottom: 16.4%; */
+  margin-top: 1%;
   li.elements{
     }
   }
@@ -706,6 +718,11 @@ and (max-device-width : 568px) {
   margin-left: 18px;
 }
   
+div.footer-in{
+  background-position: left 225px bottom, left bottom;
+}
+
+
 }
 @media screen and (min-width: 610px){
   .search_wide{
@@ -720,4 +737,17 @@ and (max-device-width : 568px) {
   .search_narrow{
     margin: auto 25% auto 5%;
   }
+}
+
+@media screen and (min-width: 1050px){
+  ._credits {
+    left: 50%;
+  }
+  div.footer-in{
+    background-position: left 215px bottom, left bottom;
+  }
+}
+
+@media screen and (max-height: 500px){
+  .footer-in{ display: none; }
 }
