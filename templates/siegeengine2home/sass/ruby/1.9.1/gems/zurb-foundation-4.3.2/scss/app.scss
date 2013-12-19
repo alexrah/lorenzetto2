@@ -222,8 +222,8 @@ body{
   /* background-image: url('../images/foto-margherita.jpg'); */
   /* background-position: bottom left; */
   /* background-position: left 0px bottom -100px; */
-  background-position: left 0px bottom 15px;
-  background-repeat: no-repeat;
+  /* background-position: left 0px bottom 15px; */
+  /* background-repeat: no-repeat; */
 }
 
 header h1{
@@ -282,7 +282,7 @@ div.footer-in{
 }
 
 div.footer-home{
-  background: url('../images/sfondo_home2.png') no-repeat right bottom, url('../images/foto-margherita.jpg') no-repeat left bottom;
+  background: url('../images/sfondo_home2.png') no-repeat right bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom;
   /* background-position: right top 20px;  */
   /* background-repeat: no-repeat; */
   /* background-size: 64%; */
@@ -584,9 +584,9 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width: 893px ){
   
-/*   body{ */
-/*   background-image: url('../images/foto-margherita3.jpg'); */
-/* } */
+  body{
+  background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom;
+}
 
   header h1{
     width: 65%;
@@ -667,4 +667,5 @@ ul.sigProClassic{
 @media screen and (max-height: 500px){
   .footer-home{ display: none; }
   .credits{ display: none; }
+  body{ background: transparent; }
 }

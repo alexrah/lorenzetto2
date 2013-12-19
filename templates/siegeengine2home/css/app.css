@@ -7573,8 +7573,8 @@ body {
   /* background-image: url('../images/foto-margherita.jpg'); */
   /* background-position: bottom left; */
   /* background-position: left 0px bottom -100px; */
-  background-position: left 0px bottom 15px;
-  background-repeat: no-repeat;
+  /* background-position: left 0px bottom 15px; */
+  /* background-repeat: no-repeat; */
 }
 
 /* line 229, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
@@ -7637,7 +7637,7 @@ div.footer-in {
 
 /* line 284, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 div.footer-home {
-  background: url("../images/sfondo_home2.png") no-repeat right bottom, url("../images/foto-margherita.jpg") no-repeat left bottom;
+  background: url("../images/sfondo_home2.png") no-repeat right bottom, url("../images/foto-margherita_ciccio.jpg") no-repeat left bottom;
   /* background-position: right top 20px;  */
   /* background-repeat: no-repeat; */
   /* background-size: 64%; */
@@ -7954,9 +7954,11 @@ div.above-content {
   }
 }
 @media screen and (min-width: 893px) {
-  /*   body{ */
-  /*   background-image: url('../images/foto-margherita3.jpg'); */
-  /* } */
+  /* line 587, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  body {
+    background: url("../images/foto-margherita.jpg") no-repeat fixed left bottom;
+  }
+
   /* line 591, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   header h1 {
     width: 65%;
@@ -8055,5 +8057,10 @@ div.above-content {
   /* line 669, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
   .credits {
     display: none;
+  }
+
+  /* line 670, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
+  body {
+    background: transparent;
   }
 }

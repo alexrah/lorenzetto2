@@ -27,6 +27,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <?php endif; ?>
 </head>
 <body>
+  <div class="scroll-wrapper">
 
 	<?php if ($this->countModules( 'top' )) : ?>
         <section class="row">
@@ -93,6 +94,8 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
         </section>
     <?php endif; ?>
 	
+<div class="push"></div>
+</div>
     <?php if ($this->countModules( 'footer' )) : ?>
         <footer class="row">
             <!--footerrow-->

@@ -38,6 +38,16 @@ $bluemarine: rgb(0,169,157);
     text-indent: -2000px;
    }
  
+/** HEADERS & READMORE COLORS */
+
+h1, h2, h3, h4, h5{
+  a{ color: $bluemarine; }
+  a:hover{ color: $bluemarine; }
+}
+
+.readmore{ color: $bluemarine; }
+.readmore:hover{ color: $bluemarine; }
+
 
 /** SIDEBAR STYLE */
 
@@ -254,12 +264,16 @@ ul.actions{
 
 /** ARTICLE BODY STYLES */
 
-body{
+html, body{
+  height: 100%
   /* background-image: url('../images/foto-margherita.jpg'); */
+  /* background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom; */
   /* background-position: bottom left; */
   /* background-position: left 0px top 55px; */
-  background-position: left bottom;
-  background-repeat: no-repeat;
+  /* background-position: left bottom; */
+  /* background-repeat: no-repeat; */
+  /* position: fixed; */
+  /* bottom: 0px; */
 }
 
 header h1{
@@ -269,7 +283,7 @@ header h1{
   background-color: rgba(255, 255, 255, 0.8) ;
   display: inline-block;
   width: 80%;
-  float: left;
+  /* float: left; */
   p{
     font-size: 13px;
     text-align: justify;
@@ -322,12 +336,14 @@ div.footer-out{
 /* } */
 
 div.footer-in{
-  background: url('../images/sfondo_pagine_banda.png') no-repeat left 150px bottom, url('../images/foto-margherita.jpg') no-repeat left bottom ;
-  position: fixed;
-  bottom: 20px;
+  background: url('../images/sfondo_pagine_banda.png') no-repeat scroll left 150px bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom ;
+  /* position: fixed; */
+  position: relative;
+  /* position: static; */
+  /* bottom: 20px; */
   width: 100%;
   height: 140px;
-  min-height: 100%;
+  /* min-height: 100%; */
   margin: 0px -2% -20px 0px;
   z-index: -200;
 
@@ -345,6 +361,16 @@ div.footer-home{
   z-index: 200;
 }
 
+
+.scroll-wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -140px;
+}
+
+.push{ height: 140px; }
+
 /* END FOOTER STYLES */
 
 /** CREDITS STYLE */
@@ -356,15 +382,15 @@ div.footer-home{
 
 
 ._credits{
-  position: fixed;
-  bottom: 0px;
+  position: relative;
+  /* bottom: 0px; */
   margin-right: 2%;
   /* position: relative; */
 
   /* top: -25px; */
   /* top: 135px; */
-  right: 0;
-  /* margin-top: 49%; */
+  /* right: 0; */
+  /* margin-top: 10.5%; */
   a{
     color: white;
   }
@@ -374,7 +400,7 @@ div.footer-home{
   float: right;
   // margin-right: 2%;
   /* width: 160px; */
-  width: 490px;
+  /* width: 490px; */
   p{
     font-size: 12px;
     text-align: right;
@@ -444,6 +470,7 @@ div.above-content{
 
 /** MENU PRODOTTI */
 .menu_prodotti{
+  background: rgba( 255, 255, 255, 0.8);
   position: relative;
   width: 95%;
   left: 2%;
@@ -461,6 +488,7 @@ div.above-content{
 
 /** MENU AZIENDA */
 .menu_azienda{
+  background: rgba( 255, 255, 255, 0.8);
   margin: auto  5%;
     .item-163{
       /* display: inline-block; */
@@ -473,9 +501,34 @@ div.above-content{
       border: none;
     a{ color: black; }
   }
+}
 
+/** MENU VIDEO */
+
+.menu_video{
+  display: inline-block;
+  @include column-count(2);
+  @include column-gap(10px);
+  margin-top: -5%;
+  .elements{
+    text-align: center;
+    width:150px;
+    /* height: 100px; */
+    margin: 0% 0%;
+    img{ border: 5px solid $bluemarine; }
+    span{ background: rgba(255, 255, 255, 0.8); }
+
+  }
+  /* img{ */
+  /*   border: 5px solid $bluemarine; */
+  /* } */
 
 }
+
+.menu_video li.elements.active{
+      border: none;
+    }
+  
 
 
 /** ALL MEDIA QUERIES START FROM HERE */
@@ -533,7 +586,7 @@ and (max-device-width : 568px) {
 
   .article-body{
     width: 85%;
-    float: left;
+    /* float: left; */
   }
   div.mod-languages_wide{
     display: block;
@@ -582,7 +635,10 @@ and (max-device-width : 568px) {
   // #sidebar{ height: 225px; }
   // #sidebar-text{ margin-top: 55%; }
   // div.sidebar-menu-block{ display: none; }
+
+  div.footer-in{ background-size: 80%; }
 }
+
 
 
 @media screen and (min-width: 768px) and (max-width: 1014px){
@@ -598,10 +654,13 @@ and (max-device-width : 568px) {
     /* margin-top: 50%; */
   }
   ul.menu_main { margin-top: 6%; }
+
+  /* div.footer-in{ background-size: 80%; } */
 }
 
 @media screen and (min-width: 480px) and (max-width: 760px){
   ._menu ul.menu_main { margin: 9% auto 1%; }
+  
 }
 
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
@@ -649,7 +708,9 @@ and (max-device-width : 568px) {
 
   div.footer-in{
     
-  background: url('../images/sfondo_pagine_banda.png') no-repeat left 50px bottom;
+  background: url('../images/sfondo_pagine_banda.png') no-repeat left -390px bottom ;
+  /* background-size: 90%; */
+  /* width: 260%; margin-left: -160% */
   }
 
 }
@@ -657,6 +718,7 @@ and (max-device-width : 568px) {
 @media screen and (min-width: 893px ){
   
   body{
+  background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom;
   /* background-image: url('../images/foto-margherita.jpg'); */
     /* background: url('../images/foto-margherita.jpg') no-repeat left bottom scroll; */
 }
@@ -722,6 +784,19 @@ div.footer-in{
   background-position: left 225px bottom, left bottom;
 }
 
+.menu_video{
+  display: inline-flex;
+  @include column-count(1);
+  @include column-gap(0px);
+  position: relative;
+  width: 72%;
+  left: 27.7%;
+  .elements{ 
+    margin: auto 1%;
+    width: 160px;
+  }
+}
+
 
 }
 @media screen and (min-width: 610px){
@@ -741,13 +816,14 @@ div.footer-in{
 
 @media screen and (min-width: 1050px){
   ._credits {
-    left: 50%;
+    /* left: 50%; */
   }
   div.footer-in{
     background-position: left 215px bottom, left bottom;
   }
 }
 
-@media screen and (max-height: 500px){
-  .footer-in{ display: none; }
-}
+/* @media screen and (max-height: 500px){ */
+/*   .footer-in{ display: none; } */
+/*   body {background: transparent;} */
+/* } */
