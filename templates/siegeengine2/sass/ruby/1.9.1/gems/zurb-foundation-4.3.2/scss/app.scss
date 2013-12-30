@@ -41,6 +41,7 @@ $bluemarine: rgb(0,169,157);
 /** HEADERS & READMORE COLORS */
 
 h1, h2, h3, h4, h5{
+  color: $bluemarine;
   a{ color: $bluemarine; }
   a:hover{ color: $bluemarine; }
 }
@@ -72,6 +73,7 @@ h1, h2, h3, h4, h5{
   border: 1px solid black;
   // position: relative;
   // float: left;
+  z-index: 200;
   p{
    margin: 0 auto; 
    text-align: center;
@@ -128,18 +130,19 @@ li {
    }
 
 
-.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134{ 
+.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134, li.item-143{ 
   background-color: rgb(203,18,45);
   display: none;
 }
-.item-103, .item-111, .item-118, .item-135{ background-color: rgb(235,106,66); }
-.item-104, .item-112, .item-119, .item-136{ background-color: rgb(242,185,54); }
-.item-105, .item-113, .item-120, .item-137{ background-color: rgb(133,189,97); }
-.item-106, .item-114, .item-121, .item-138{ background-color: rgb(0,171,164); }
-.item-107, .item-115, .item-122, .item-139{ background-color: rgb(83,142,180); }
-li.elements.item-133, li.elements.item-141, li.elements.item-142 { 
-  background-image: url("../images/pulsante_carrello_bianco.jpg");
-  background-size: 100%;
+.item-103, .item-111, .item-118, .item-135, .item-144{ background-color: rgb(235,106,66); }
+.item-104, .item-112, .item-119, .item-136, .item-145{ background-color: rgb(242,185,54); }
+.item-105, .item-113, .item-120, .item-137, .item-147{ background-color: rgb(133,189,97); }
+.item-106, .item-114, .item-121, .item-138, .item-148{ background-color: rgb(0,171,164); }
+.item-107, .item-115, .item-122, .item-139, .item-149{ background-color: rgb(83,142,180); }
+li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.item-146 { 
+  background-image: url("../images/pulsante_carrello_bianco.png");
+  background-position: left top;
+  background-size: 101% 101%;
   background-repeat: no-repeat;
   border: 6px solid rgb(154,101,153);
   /* border: 0px solid transparent; */
@@ -160,20 +163,21 @@ li.elements.item-133 a:hover { top: 41px; }
 li.elements.item-133:hover {
   /* a{ top: 42px; } */
 }
-li.elements.item-133.active {
-  background-image: url('../images/pulsante_carrello_nero.jpg');
-  background-size: 100%;
+li.elements.item-133.active, li.elements.item-142.active, li.elements.item-141.active, li.elements.item-146.active {
+  background-image: url('../images/pulsante_carrello_nero.png');
+  background-position: left -1px center;
+  background-size: 101%;
   background-repeat: no-repeat;
   a{ top: 42px; }
 }
 
 
-li.item-127 { background-color: rgb(116, 157, 211); }
-li.elements.item-128 {
+li.item-127, li.item-130, li.item-175, li.item-172 { background-color: rgb(116, 157, 211); }
+li.elements.item-128, li.elements.item-131, li.item-176, li.item-173 {
   background-color: rgb(107, 192, 101);
   margin: auto 8%;
 }
-li.item-129 { background-color: rgb(49, 197, 207); }
+li.item-129, li.item-132, li.item-177, li.item-174 { background-color: rgb(49, 197, 207); }
 
 ul.menu_main, ul.menu_sidebar{
   // margin: 5% 0% 1%;
@@ -224,6 +228,7 @@ hr{
 ul.actions{
   float: right;
   margin-top: 4px;
+  /* margin-right: 9%; */
   /* width: 14%; */
   li{
   width: 35px;
@@ -277,7 +282,7 @@ html, body{
 }
 
 header h1{
-  color: rgb(19,155,140);
+  /* color: rgb(19,155,140); */
 }
 .article-body{
   background-color: rgba(255, 255, 255, 0.8) ;
@@ -506,7 +511,7 @@ div.above-content{
 /** MENU VIDEO */
 
 .menu_video{
-  display: inline-block;
+  /* display: inline-block; */
   @include column-count(2);
   @include column-gap(10px);
   margin-top: -5%;
@@ -529,6 +534,84 @@ div.above-content{
       border: none;
     }
   
+/** PAGINE EVENTI */
+.blog{
+  /* width: 90%; */
+  h2{
+    width: 55%;
+    position: relative;
+    left: 28.2%;
+    /* margin-top: -20%; */
+  /*   margin-bottom: 35%; */
+  }
+  /* ul.actions{ */
+  /*   margin-bottom: -20%; */
+  /* } */
+}
+ /* .img-left, .img-right{ */
+ /*   img{ */
+ /*   width: 150px; */
+ /*   border: 5px solid $bluemarine; */
+ /*   float: left; */
+ /*   } */
+ /* } */
+
+ .img-left, {
+   width: 150px;
+   border: 5px solid $bluemarine;
+   float: left;
+   margin-left: 2px;
+ }
+
+
+ .eventi{
+   /* width: 70%; */
+   /* float: right; */
+   margin-top: 2%;
+ }
+
+/** PAGINA NOVITA' */
+.novita{
+  /* width: 70%; */
+  /* float: right; */
+  p{
+    margin-bottom: 0.6em;
+    margin-left: 12em;
+    /* margin-top: 2%; */
+  }
+  .readmore{
+    /* margin-left: 5px; */
+  }
+  ul.sigProClassic.singleThumbGallery{
+    padding: 0px !important;
+  }
+}
+
+.intro-articles .article-body{
+  margin-top: -2%;
+}
+
+/** PAGINA ORDINI */
+
+.contentpane{
+  position: relative;
+  width: 90%;
+}
+
+/** PAGINA MAP */
+
+#map{ margin: 0% 0% 2%; }
+
+#myModal{
+  width: 98%;
+  top: 0px;
+}
+  .reveal-modal{
+    /* padding: 0; */
+    top: 0;
+    left: 0;
+    margin-left: 0;
+  }
 
 
 /** ALL MEDIA QUERIES START FROM HERE */
@@ -572,7 +655,7 @@ and (max-device-width : 568px) {
     margin-top: 5%;
   }
   .menu_main{ 
-    li.item-102, li.item-110, li.item-117, li.item-134 { display: inline-block; }
+    li.item-102, li.item-110, li.item-117, li.item-134, li.item-143 { display: inline-block; }
   }
   .menu_main, .menu_sidebar{
   li.elements{
@@ -615,19 +698,46 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width: 641px) and (max-width: 893px){
-  header h1{
-    width: 65%;
-    margin-top: -15%;
+.items-leading header h1{
+    width: 40%;
+    margin-top: -14%;
     position: relative;
     left: 60%
   }
 
-  .article-body{
+.items-leading .article-body{
      width: 55%;
      position: relative;
      left: 39%;
-     /* margin-top: -18%; */
+     margin-top: 1%;
    } 
+
+   .menu_video{
+     margin-top: 0%;
+   }
+
+   .contentpane{
+     h1{
+       margin-left: 1%;
+     }
+    }
+
+#map{ margin: 0% 10%; }
+
+/* .intro-articles header h1{ */
+/*     width: 40%; */
+/*     /* margin-top: -14%; */ 
+/*     position: relative; */
+/*     left: 35% */
+/*   } */
+/*  */
+/* .blog h2{ */
+/*   width: 55%; */
+/*   position: relative; */
+/*   left: 36%; */
+/*   margin-top: -10%; */
+/* } */
+
  }
 
 
@@ -643,7 +753,7 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width: 768px) and (max-width: 1014px){
   .menu_main{
-    li.item-102, li.item-110, li.item-117, li.item-134{
+    li.item-102, li.item-110, li.item-117, li.item-134, li.item-143{
       display: none;
     }
   }
@@ -660,7 +770,22 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width: 480px) and (max-width: 760px){
   ._menu ul.menu_main { margin: 9% auto 1%; }
-  
+
+.intro-articles header h1{
+    /* width: 40%; */
+    /* margin-top: -14%; */
+    position: relative;
+    /* left: 35% */
+  }
+
+/*   .blog h2{ */
+/*   width: 55%; */
+/*   position: relative; */
+/*   left: 36%; */
+/*   margin-top: 2%; */
+/* } */
+/*  */
+
 }
 
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
@@ -680,9 +805,10 @@ and (max-device-width : 568px) {
 /** LANGUAGES NARROW MENU  */
   div.mod-languages_narrow{
     width: 100%;
-    display: inline-block;
+    /* display: inline-block; */
+    display: inline;
     position: relative;
-    top: 160px;
+    /* top: 160px; */
     left: 3px;
       ul.lang-block{
       float: right;
@@ -713,12 +839,21 @@ and (max-device-width : 568px) {
   /* width: 260%; margin-left: -160% */
   }
 
+ul.actions{ margin-right: 9%; }
+
+article:nth-of-type(1) ul.actions{
+  margin-right: 0%;
+}
+
+
+
 }
 
 @media screen and (min-width: 893px ){
   
   body{
-  background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom;
+  /* background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom; */
+  background: url('/lorenzetto2/images/sfondo_margherita/foto-margherita.jpg') no-repeat fixed left bottom;
   /* background-image: url('../images/foto-margherita.jpg'); */
     /* background: url('../images/foto-margherita.jpg') no-repeat left bottom scroll; */
 }
@@ -727,7 +862,7 @@ and (max-device-width : 568px) {
     width: 55%;
     margin-top: -21%;
     position: relative;
-    left: 30%
+    left: 28.5%;
   }
 
   .article-body{
@@ -797,6 +932,28 @@ div.footer-in{
   }
 }
 
+.contentpane{
+  position: relative;
+  left: 28.3%;
+  width: 70%;
+  margin-top: -20%;
+}
+
+
+#map{ margin: 0% 20%; }
+
+.intro-articles{
+  header h1{
+    /* width: 55%; */
+    margin-top: 2%;
+    position: relative;
+    left: 28.5%;
+  }
+}
+
+.blog h2{
+  margin-top: -20%;
+}
 
 }
 @media screen and (min-width: 610px){
@@ -827,3 +984,14 @@ div.footer-in{
 /*   .footer-in{ display: none; } */
 /*   body {background: transparent;} */
 /* } */
+
+@media screen and (max-width: 730px){
+  .blog h2{
+  width: 55%;
+  position: relative;
+  left: 36%;
+  margin-top: 2%;
+}
+
+
+}

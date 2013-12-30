@@ -7399,38 +7399,38 @@ li {
 }
 
 /* line 102, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134 {
+.menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134, li.item-143 {
   background-color: #cb122d;
   display: none;
 }
 
 /* line 106, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.item-103, .item-111, .item-118, .item-135 {
+.item-103, .item-111, .item-118, .item-135, .item-144 {
   background-color: #eb6a42;
 }
 
 /* line 107, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.item-104, .item-112, .item-119, .item-136 {
+.item-104, .item-112, .item-119, .item-136, .item-145 {
   background-color: #f2b936;
 }
 
 /* line 108, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.item-105, .item-113, .item-120, .item-137 {
+.item-105, .item-113, .item-120, .item-137, .item-147 {
   background-color: #85bd61;
 }
 
 /* line 109, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.item-106, .item-114, .item-121, .item-138 {
+.item-106, .item-114, .item-121, .item-138, .item-148 {
   background-color: #00aba4;
 }
 
 /* line 110, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.item-107, .item-115, .item-122, .item-139 {
+.item-107, .item-115, .item-122, .item-139, .item-149 {
   background-color: #538eb4;
 }
 
 /* line 111, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-li.elements.item-133, li.elements.item-141, li.elements.item-142 {
+li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.item-146 {
   background-image: url("../images/pulsante_carrello_bianco.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -7515,18 +7515,18 @@ hr {
 
 /* END SIDEBAR MENU STYLES */
 /* line 176, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-li.item-127 {
+li.item-127, li.item-130, li.item-175, li.item-172 {
   background-color: #749dd3;
 }
 
 /* line 177, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-li.elements.item-128 {
+li.elements.item-128, li.elements.item-131, li.item-176, li.item-173 {
   background-color: #6bc065;
   margin: auto 8%;
 }
 
 /* line 181, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-li.item-129 {
+li.item-129, li.item-132, li.item-177, li.item-174 {
   background-color: #31c5cf;
 }
 

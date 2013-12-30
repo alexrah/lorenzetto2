@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'lorenzetto';
+	public $sitename = 'LORENZETTO';
 	public $editor = 'codemirror';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -59,7 +59,7 @@ class JConfig {
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';
-	public $sitename_pagetitles = '0';
+	public $sitename_pagetitles = '2';
 	public $force_ssl = '0';
 	public $frontediting = '1';
 	public $feed_email = 'author';

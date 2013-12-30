@@ -99,16 +99,16 @@ li {
    }
 
 
-.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134{ 
+.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134, li.item-143{ 
   background-color: rgb(203,18,45);
   display: none;
 }
-.item-103, .item-111, .item-118, .item-135{ background-color: rgb(235,106,66); }
-.item-104, .item-112, .item-119, .item-136{ background-color: rgb(242,185,54); }
-.item-105, .item-113, .item-120, .item-137{ background-color: rgb(133,189,97); }
-.item-106, .item-114, .item-121, .item-138{ background-color: rgb(0,171,164); }
-.item-107, .item-115, .item-122, .item-139{ background-color: rgb(83,142,180); }
-li.elements.item-133, li.elements.item-141, li.elements.item-142 { 
+.item-103, .item-111, .item-118, .item-135, .item-144{ background-color: rgb(235,106,66); }
+.item-104, .item-112, .item-119, .item-136, .item-145{ background-color: rgb(242,185,54); }
+.item-105, .item-113, .item-120, .item-137, .item-147{ background-color: rgb(133,189,97); }
+.item-106, .item-114, .item-121, .item-138, .item-148{ background-color: rgb(0,171,164); }
+.item-107, .item-115, .item-122, .item-139, .item-149{ background-color: rgb(83,142,180); }
+li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.item-146 { 
   background-image: url("../images/pulsante_carrello_bianco.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -173,12 +173,12 @@ hr{
 
  /* END SIDEBAR MENU STYLES */
 
-li.item-127 { background-color: rgb(116, 157, 211); }
-li.elements.item-128 {
+li.item-127, li.item-130, li.item-175, li.item-172 { background-color: rgb(116, 157, 211); }
+li.elements.item-128, li.elements.item-131, li.item-176, li.item-173 {
   background-color: rgb(107, 192, 101);
   margin: auto 8%;
 }
-li.item-129 { background-color: rgb(49, 197, 207); }
+li.item-129, li.item-132, li.item-177, li.item-174 { background-color: rgb(49, 197, 207); }
 
 ul.menu_main, ul.menu_sidebar{
   // margin: 5% 0% 1%;
