@@ -178,6 +178,31 @@ li.elements.item-128, li.elements.item-131, li.item-176, li.item-173 {
   background-color: rgb(107, 192, 101);
   margin: auto 8%;
 }
+li.elements.item-176 a { 
+  font-size: 7px !important;
+  left: -2px;
+}
+
+li.elements.item-137 a {
+  font-size: 9px !important;
+  top: 40px;
+}
+
+li.elements.item-142 a {
+  font-size: 10px !important;
+  left: 0px;
+}
+ 
+li.elements.item-119 a {
+  left: 0px;
+}
+ li.elements.item-147 a {
+   font-size: 11px !important;
+ }
+
+
+
+
 li.item-129, li.item-132, li.item-177, li.item-174 { background-color: rgb(49, 197, 207); }
 
 ul.menu_main, ul.menu_sidebar{
@@ -447,7 +472,7 @@ and (max-device-width : 568px) {
     margin-top: 5%;
   }
   .menu_main{ 
-    li.item-102, li.item-110, li.item-117, li.item-134 { display: inline-block; }
+    li.item-102, li.item-110, li.item-117, li.item-134, li.item-143 { display: inline-block; }
   }
   .menu_main, .menu_sidebar{
   li.elements{
@@ -518,7 +543,7 @@ and (max-device-width : 568px) {
 
 @media screen and (min-width: 768px) and (max-width: 1010px){
   .menu_main{
-    li.item-102, li.item-110, li.item-117, li.item-134{
+    li.item-102, li.item-110, li.item-117, li.item-134, li.item-143{
       display: none;
     }
   }
@@ -532,7 +557,8 @@ and (max-device-width : 568px) {
 }
 
 @media screen and (min-width: 480px) and (max-width: 760px){
-  ._menu ul.menu_main { margin: 9% auto 1%; }
+  /* ._menu ul.menu_main { margin: 9% auto 1%; } */
+  ul.menu_main { margin: 9% auto 1%; }
 }
 
 /* I NEED A MEDIA QUERY AT 560PX AND NOT 568PX JUST TO MATCH MENU RESIZE */
