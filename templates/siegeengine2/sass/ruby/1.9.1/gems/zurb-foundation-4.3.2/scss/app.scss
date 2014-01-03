@@ -204,7 +204,12 @@ li.elements.item-119 a {
    font-size: 11px !important;
  }
 
-
+li.elements.item-148 {
+  line-height: 13px;
+  a {
+    top: 33px;
+  }
+}
 ul.menu_main, ul.menu_sidebar{
   // margin: 5% 0% 1%;
   margin: 5% auto 1%;
@@ -325,7 +330,8 @@ header h1{
 
 .article-body p.home{
   font-family: dinosaur;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 45px;
   text-align: right;
   color: #00a99d;
   width: 100%;
@@ -1002,7 +1008,7 @@ div.footer-in{
 /* .blog h2{ */
 /* .blog { */
 
-/* IE fix for DOVE & INFO  */
+/** IE fix */
 /* article:nth-of-type(1) { */
 .pagine {
 /* .blog, ._info, .intestazione {  */
