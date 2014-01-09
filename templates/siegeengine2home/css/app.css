@@ -7399,7 +7399,7 @@ li {
 }
 
 /* line 102, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
-.menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134, li.item-143 {
+.menu_main li.item-102, .menu_main li.item-110, .menu_main li.item-117, .menu_main li.item-134, .menu_main li.item-143 {
   background-color: #cb122d;
   display: none;
 }
@@ -7555,11 +7555,11 @@ li.elements.item-147 a {
 
 /* line 203, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 li.elements.item-148 {
-  line-height: 13px;
+  line-height: 8px;
 }
 /* line 205, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */
 li.elements.item-148 a {
-  top: 33px;
+  /* top: 33px; */
 }
 
 /* line 212, ../sass/ruby/1.9.1/gems/zurb-foundation-4.3.2/scss/app.scss */

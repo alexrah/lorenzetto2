@@ -130,7 +130,7 @@ li {
    }
 
 
-.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134, li.item-143{ 
+.menu_main li.item-102,.menu_main li.item-110,.menu_main li.item-117,.menu_main li.item-134,.menu_main li.item-143{ 
   background-color: rgb(203,18,45);
   display: none;
 }
@@ -165,7 +165,8 @@ li.elements.item-133:hover {
 }
 li.elements.item-133.active, li.elements.item-142.active, li.elements.item-141.active, li.elements.item-146.active {
   background-image: url('../images/pulsante_carrello_nero.png');
-  background-position: left -1px center;
+  /* background-position: left -1px center; */
+  background-position: left top;
   background-size: 101%;
   background-repeat: no-repeat;
   a{ top: 42px; }
@@ -205,9 +206,9 @@ li.elements.item-119 a {
  }
 
 li.elements.item-148 {
-  line-height: 13px;
+  line-height: 8px;
   a {
-    top: 33px;
+    /* top: 33px; */
   }
 }
 ul.menu_main, ul.menu_sidebar{
@@ -617,6 +618,11 @@ div.above-content{
 }
 
 /** PAGINA NOVITA' */
+
+.blog > h2 {
+  font-size: 2em;
+}
+
 .novita{
   /* width: 70%; */
   /* float: right; */

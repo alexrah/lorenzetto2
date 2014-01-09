@@ -117,7 +117,9 @@ $info = $this->item->params->get('info_block_position', 0);
 	<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
 		<figure class="img-<?php echo htmlspecialchars($imgfloat); ?>">
-			<img title="<?php echo htmlspecialchars($images->image_intro_caption); ?>" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+    <a href="http://www.teddybackup.com<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
+      <img title="<?php echo htmlspecialchars($images->image_intro_caption); ?>" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+</a>
 				<?php if ($images->image_intro_caption): ?>
 					<figcaption><?php echo htmlspecialchars($images->image_intro_caption); ?></figcaption>
 				<?php endif; ?>
