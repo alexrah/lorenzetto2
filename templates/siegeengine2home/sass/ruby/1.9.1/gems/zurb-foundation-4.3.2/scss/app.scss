@@ -437,6 +437,15 @@ div.above-content{
 
 }
 
+/** POPUP STYLE */
+#sbox-content, #sbox-window{
+  background-color: transparent;
+}
+#sbox-window.shadow{
+  @include single-box-shadow(rgb(255,255,255), 0px, 0px, 0px);
+}
+
+#sbox-btn-close{ display: none; }
 
 /* ALLA MEDIA QUERIES START FROM HERE */
 
