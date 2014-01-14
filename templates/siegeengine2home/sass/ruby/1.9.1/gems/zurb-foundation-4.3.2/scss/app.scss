@@ -23,7 +23,13 @@
        url('../fonts/dinosaur.ttf') format('truetype');
 }
 
-
+/** CSS TRICKS -> BACKGROUND IMAGES LINK */
+   #link{
+    display: block;
+    min-height: 100%; 
+    text-indent: -2000px;
+   }
+ 
 
 /* START SIDEBAR STYLE */
 
@@ -39,12 +45,14 @@
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
   display: inline-block;
-  padding: 1%;
+  /* padding: 1%; */
+  padding: 9px;
   margin: 2% 3% 1%;
   // width: 275px;
   width: 90%;
   // height: 250px;
-  height: 30%;
+  /* height: 30%; */
+  /* height: 325px; */
   border: 1px solid black;
   // position: relative;
   // float: left;
@@ -60,6 +68,12 @@
    p:last-child{
      font-size: 0.8em;   
    }
+   #link{
+    display: block;
+    height: 120px; margin-bottom: -100px;
+    text-indent: -2000px;
+   }
+
   
 }
 
@@ -122,8 +136,8 @@ li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.it
 
 
 .menu_sidebar li.elements:hover, .menu_main li.elements:hover{ border: 6px solid black; }
-li.elements.active{ border: 6px solid black; }
-li.elements.active a{
+li.elements.active { border: 6px solid black; }
+li.elements.active a, .sidebar-menu ul.menu-sidebar li.elements.active a{
   color: black;
   text-shadow: 0 0 0px rgba(0, 0, 0, 0.6);
   }
@@ -156,7 +170,7 @@ div.sidebar-menu-block{
           /* left: -3px; */
           top: 8px;
           font-size: 9px;
-          color: black;
+          color: white;
           text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         }
       }

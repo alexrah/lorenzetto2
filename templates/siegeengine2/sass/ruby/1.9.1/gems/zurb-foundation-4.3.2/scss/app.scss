@@ -64,12 +64,14 @@ h1, h2, h3, h4, h5{
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
   display: inline-block;
-  padding: 1%;
+  /* padding: 1%; */
+  padding: 9px;
   margin: 2% 3% 1%;
   // width: 275px;
   width: 90%;
   // height: 250px;
-  height: 30%;
+  /* height: 30%; */
+  /* height: 325px; */
   border: 1px solid black;
   // position: relative;
   // float: left;
@@ -155,7 +157,7 @@ li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.it
 
 .menu_sidebar li.elements:hover, .menu_main li.elements:hover{ border: 6px solid black; }
 li.elements.active{ border: 6px solid black; }
-li.elements.active a{
+li.elements.active a, .sidebar-menu ul.menu_sidebar li.elements.active a{
   color: black;
   text-shadow: 0 0 0px rgba(0, 0, 0, 0.6);
   }
@@ -248,7 +250,7 @@ div.sidebar-menu-block{
           /* left: -3px; */
           top: 8px;
           font-size: 9px;
-          color: black;
+          color: white;
           text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         }
       }
@@ -561,15 +563,17 @@ div.above-content{
 /** MENU VIDEO */
 
 .menu_video{
-  /* display: inline-block; */
-  @include column-count(2);
-  @include column-gap(10px);
+  display: inline-flex;
+  /* @include column-count(2); */
+  /* @include column-gap(10px); */
   margin-top: -5%;
   .elements{
     text-align: center;
-    width:150px;
+    /* width:150px; */
+    width: 20.5%;
     /* height: 100px; */
-    margin: 0% 0%;
+    /* margin: 0% 0%; */
+    margin: 0% 1% 0% 0%;
     img{ border: 5px solid $bluemarine; }
     span{ background: rgba(255, 255, 255, 0.8); }
 
@@ -693,7 +697,12 @@ div.above-content{
   }
 }
 
+/** MENU ARCHIVIO EVENTI PASSATI */
 
+.menu_archivio{
+  margin-left: 5%;
+  margin-top: 2%;
+}
 
 /** ALL MEDIA QUERIES START FROM HERE */
 
@@ -794,7 +803,7 @@ and (max-device-width : 568px) {
    } 
 
    .menu_video{
-     margin-top: 0%;
+    /* margin-top: 0%; */
    }
 
    .contentpane{
@@ -1014,7 +1023,7 @@ div.footer-in{
   @include column-count(1);
   @include column-gap(0px);
   position: relative;
-  width: 72%;
+  width: 71.5%;
   left: 27.7%;
   .elements{ 
     margin: auto 1%;
@@ -1069,6 +1078,24 @@ div.footer-in{
   ul{
     margin-left: 2px;
     }
+}
+
+/** ARCHIVIO EVENTI PASSATI */
+
+.form-inline{
+  position: relative;
+  left: 27.8%;
+  width: 73%;
+  margin-top: -16%;
+}
+
+.menu_archivio{
+  position: relative;
+  left: 28%;
+  width: 70%;
+  margin-top: 2%;
+  margin-left: 1%;
+  float: right;
 }
 
 }

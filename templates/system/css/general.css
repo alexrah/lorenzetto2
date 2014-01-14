@@ -162,3 +162,6 @@ a img.calendar {
 	cursor: pointer;
 	vertical-align: middle;
 }
+
+
+.formelm .inputbox { position: absolute; left: 33%; }
