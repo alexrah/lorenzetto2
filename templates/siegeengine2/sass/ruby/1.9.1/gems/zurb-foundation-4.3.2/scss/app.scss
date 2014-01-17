@@ -59,7 +59,8 @@ h1, h2, h3, h4, h5{
   /* background-position: top center, left top; */
   /* background-repeat: no-repeat, y-repeat; */
   /* background-size: 100%; */
-  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclata.jpg') top left repeat-y;
+  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclataX.jpg') top left repeat-y;
+  background-color: rgb(255,251,247);
   background-size: 100%, 100%;
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
@@ -171,7 +172,7 @@ li.elements.item-133.active, li.elements.item-142.active, li.elements.item-141.a
   background-position: left top;
   background-size: 101%;
   background-repeat: no-repeat;
-  a{ top: 42px; }
+  a{ top: 10px; }
 }
 
 
@@ -206,7 +207,8 @@ li.elements.item-119 a {
   left: 0px;
 }
  li.elements.item-147 a {
-   font-size: 11px !important;
+   font-size: 9px !important;
+   top: 11px !important;
  }
 
 li.elements.item-148 {

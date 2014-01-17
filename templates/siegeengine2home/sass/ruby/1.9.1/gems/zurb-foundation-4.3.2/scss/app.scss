@@ -40,7 +40,8 @@
   /* background-position: top center, left top; */
   /* background-repeat: no-repeat, y-repeat; */
   /* background-size: 100%; */
-  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclata.jpg') top left repeat-y;
+  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclataX.jpg') top left repeat-y;
+  background-color: rgb(255,251,247);
   background-size: 100%, 100%;
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
   position: relative;
@@ -290,7 +291,7 @@ header h1{
   p{
     font-size: 13px;
     text-align: justify;
-    padding: 0% 5% 0 5%;
+    padding: 0% 5% 0 0%;
   }
 }
 
@@ -336,7 +337,7 @@ div.footer-in{
 }
 
 div.footer-home{
-  background: url('../images/sfondo_home2.png') no-repeat right bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom;
+  background: url('../images/sfondo_home3.png') no-repeat right bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom;
   /* background-position: right top 20px;  */
   /* background-repeat: no-repeat; */
   /* background-size: 64%; */
@@ -649,7 +650,7 @@ and (max-device-width : 568px) {
 @media screen and (min-width: 893px ){
   
   body{
-  background: url('../images/foto-margherita.jpg') no-repeat fixed left bottom;
+  background: url('/lorenzetto2/images/sfondo_margherita/foto-margherita.jpg') no-repeat fixed left bottom;
 }
 
   header h1{
@@ -721,7 +722,7 @@ ul.sigProClassic{
 
 @media screen and (min-width: 1050px){
   div.footer-home{
-    background-position: left 400px bottom, left bottom;
+    background-position: left 310px bottom, left bottom;
   }
   .home .credits{
     left: 50%;
