@@ -17,11 +17,11 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	<header class="page-header"><h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 		<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-		<h2> <?php echo $this->escape($this->params->get('page_subheading')); ?>
+		<h1> <?php echo $this->escape($this->params->get('page_subheading')); ?>
 			<?php if ($this->params->get('show_category_title')) : ?>
 			<span class="subheading-category"><?php echo $this->category->title;?></span>
 			<?php endif; ?>
-		</h2>
+		</h1>
 		<?php endif; ?>
 	</header>
 	<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>

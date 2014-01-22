@@ -3,11 +3,11 @@
  * NoNumber Framework Helper File: Protect
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -47,15 +47,9 @@ class NNProtect
 	 */
 	public static function isAdmin($block_login = 0)
 	{
-		$options = array('com_acymailing');
-		if ($block_login)
-		{
-			$options[] = 'com_login';
-		}
-
 		return (
 			JFactory::getApplication()->isAdmin()
-			&& !in_array(JFactory::getApplication()->input->get('option'), $options)
+			&& (!$block_login || JFactory::getApplication()->input->get('option') != 'com_login')
 			&& JFactory::getApplication()->input->get('task') != 'preview'
 		);
 	}
@@ -120,20 +114,12 @@ class NNProtect
 			return;
 		}
 
-		$regex = array(
-			'(<' . '(input|select|option|button)(\s[^>]*)?>)',
-			'(<' . 'textarea(\s[^>]*)?>.*?</textarea>)',
-		);
-		$regex = '#(' . implode('|', $regex) . ')#si';
+		$regex = '#(?:(?:'
+			. '(?:<' . 'input\s[^>]*type="text"[^>]*>)'
+			. '|(?:<' . 'textarea(\s[^>]*)?>.*?</textarea>)'
+			. ')\s*)+#si';
 
-		if (preg_match_all($regex, $str, $matches, PREG_SET_ORDER) > 0)
-		{
-			foreach ($matches as $match)
-			{
-				$protected = self::$protect_a . base64_encode($match['0']) . self::$protect_b;
-				$str = str_replace($match['0'], $protected, $str);
-			}
-		}
+		self::protectByRegex($str, $regex);
 	}
 
 	/**
@@ -148,13 +134,33 @@ class NNProtect
 
 		$regex = '#<script[\s>].*?</script>#si';
 
-		if (preg_match_all($regex, $str, $matches, PREG_SET_ORDER) > 0)
+		self::protectByRegex($str, $regex);
+	}
+
+	/**
+	 * protect all text based form fields
+	 */
+	public static function protectHtmlTags(&$str)
+	{
+		if (strpos($str, '</') === false)
 		{
-			foreach ($matches as $match)
-			{
-				$protected = self::$protect_a . base64_encode($match['0']) . self::$protect_b;
-				$str = str_replace($match['0'], $protected, $str);
-			}
+			return;
+		}
+
+		$regex = '#</?([a-z][a-z0-9]*)(?:\s[^>]*)?>#si';
+
+		self::protectByRegex($str, $regex);
+	}
+
+	/**
+	 * protect all text based form fields
+	 */
+	private static function protectByRegex(&$str, $regex)
+	{
+		while (preg_match($regex, $str, $match))
+		{
+			$protected = self::$protect_a . base64_encode($match['0']) . self::$protect_b;
+			$str = str_replace($match['0'], $protected, $str);
 		}
 	}
 
@@ -211,13 +217,10 @@ class NNProtect
 
 		$regex = '#' . preg_quote('{' . self::$sourcerer_tag, '#') . '[\s\}].*?' . preg_quote('{/' . self::$sourcerer_tag . '}', '#') . '#si';
 
-		if (preg_match_all($regex, $str, $matches, PREG_SET_ORDER) > 0)
+		while (preg_match($regex, $str, $match))
 		{
-			foreach ($matches as $match)
-			{
-				$protected = self::$protect_a . base64_encode($match['0']) . self::$protect_b;
-				$str = str_replace($match['0'], $protected, $str);
-			}
+			$protected = self::$protect_a . base64_encode($match['0']) . self::$protect_b;
+			$str = str_replace($match['0'], $protected, $str);
 		}
 	}
 
@@ -241,7 +244,7 @@ class NNProtect
 			$protected = array();
 			foreach ($tags as $i => $tag)
 			{
-				$protected[$i] = base64_encode($tag);
+				$protected[$i] = self::$protect_a . base64_encode($tag) . self::$protect_b;
 			}
 		}
 
@@ -274,7 +277,7 @@ class NNProtect
 				{
 					$s = explode('</form>', $s, 2);
 					// protect tags only inside form fields
-					if (preg_match_all('#(<textarea[^>]*>.*?<\/textarea>|<input[^>]*>)#si', $s['0'], $matches, PREG_SET_ORDER) > 0)
+					if (preg_match_all('#(?:<textarea[^>]*>.*?<\/textarea>|<input[^>]*>)#si', $s['0'], $matches, PREG_SET_ORDER) > 0)
 					{
 						foreach ($matches as $match)
 						{
@@ -296,13 +299,10 @@ class NNProtect
 	public static function unprotect(&$str)
 	{
 		$regex = '#' . preg_quote(self::$protect_a, '#') . '(.*?)' . preg_quote(self::$protect_b, '#') . '#si';
-		if (preg_match_all($regex, $str, $matches, PREG_SET_ORDER) > 0)
+		while (preg_match($regex, $str, $match))
 		{
-			foreach ($matches as $match)
-			{
-				$r = base64_decode($match['1']);
-				$str = str_replace($match['0'], $r, $str);
-			}
+			$r = base64_decode($match['1']);
+			$str = str_replace($match['0'], $r, $str);
 		}
 	}
 

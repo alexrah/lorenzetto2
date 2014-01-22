@@ -11,7 +11,7 @@ $bluemarine: rgb(0,169,157);
 /** FONTS */
 
 // @include font-face("coamei", font-files("../fonts/coamei_b.woff", woff, "../fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
-@include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+/* @include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot"); */
 
 @font-face {
     font-family: coamei;
@@ -44,7 +44,11 @@ h1, h2, h3, h4, h5{
   color: $bluemarine;
   a{ color: $bluemarine; }
   a:hover{ color: $bluemarine; }
+  /* font-size: 1.6em; */
 }
+h2 { font-size: 1.6em; }
+.blog h1 { margin-top: 0; }
+/* h1:nth-of-type(1) { font-size: 2em; } */
 
 .readmore{ color: $bluemarine; }
 .readmore:hover{ color: $bluemarine; }
@@ -59,7 +63,7 @@ h1, h2, h3, h4, h5{
   /* background-position: top center, left top; */
   /* background-repeat: no-repeat, y-repeat; */
   /* background-size: 100%; */
-  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclataX.jpg') top left repeat-y;
+  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat ;
   background-color: rgb(255,251,247);
   background-size: 100%, 100%;
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
@@ -187,20 +191,23 @@ li.item-129, li.item-132, li.item-177, li.item-174 { background-color: rgb(49, 1
 /** SPECIAL FONTS ADJUSTMENTS AND MENU TEXT POSITION */
 
 li.elements.item-176 a {
-   font-size: 7px !important;
-   left: -2px;
-   margin-top: 2px;
+   /* font-size: 7px !important; */
+   /* left: -2px; */
+   /* margin-top: 2px; */
  }
 
 li.elements.item-137 a {
   font-size: 9px !important;
-  top: 10px;
+  top: 7px;
+  left: 0px;
+  padding-top: 55%;
 }
 
 li.elements.item-142 a {
   font-size: 10px !important;
   left: 0px;
-  top: 10px;
+  top: 7px;
+  padding-top: 52%;
 }
  
 li.elements.item-119 a {
@@ -208,11 +215,12 @@ li.elements.item-119 a {
 }
  li.elements.item-147 a {
    font-size: 9px !important;
-   top: 11px !important;
+   top: 7px !important;
+   padding-top: 55%;
  }
 
 li.elements.item-148 {
-  line-height: 8px;
+  /* line-height: 8px; */
   a {
     /* top: 33px; */
   }
@@ -394,7 +402,7 @@ div.footer-out{
 /* } */
 
 div.footer-in{
-  background: url('../images/sfondo_pagine_banda.png') no-repeat scroll left 150px bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom ;
+  background: url('../images/sfondo_pagine_banda.png') no-repeat scroll left 150px bottom ;
   /* position: fixed; */
   position: relative;
   /* position: static; */
@@ -576,7 +584,7 @@ div.above-content{
     /* height: 100px; */
     /* margin: 0% 0%; */
     margin: 0% 1% 0% 0%;
-    img{ border: 5px solid $bluemarine; }
+    img{ border: 6px solid $bluemarine; }
     span{ background: rgba(255, 255, 255, 0.8); }
 
   }
@@ -586,14 +594,15 @@ div.above-content{
 
 }
 
-.menu_video li.elements.active{
+.menu_video .elements.active img{ 
+      /* border: 5px solid black; */
       border: none;
     }
   
 /** PAGINE EVENTI + STILI CATEGORIA-BLOG */
 .blog{
   /* width: 90%; */
-  h2{
+  h1, h2{
     width: 55%;
     position: relative;
     left: 28.2%;
@@ -618,6 +627,7 @@ div.above-content{
    float: left;
    margin-left: 2px;
    margin-right: 1%;
+   padding-bottom: 1px;
  }
 
 
@@ -632,8 +642,8 @@ div.above-content{
 }
 
 /** PAGINA OFFERTE */
-.offerte{
-  
+.offerte img{
+  width: 100%;
 }
 
 /** PAGINA NOVITA' */
@@ -1043,10 +1053,11 @@ div.footer-in{
 
 #map{ margin: 0% 20%; }
 
-.intro-articles{
-  header h1{
+.blog .intro-articles{
+  header h2{
     /* width: 55%; */
-    margin-top: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     position: relative;
     left: 28.5%;
   }
@@ -1084,7 +1095,7 @@ div.footer-in{
 
 /** ARCHIVIO EVENTI PASSATI */
 
-.form-inline{
+.archive .form-inline{
   position: relative;
   left: 27.8%;
   width: 73%;
@@ -1131,7 +1142,7 @@ div.footer-in{
 /* } */
 
 @media screen and (max-width: 730px){
-  .blog h2{
+  .blog h1{
   width: 55%;
   position: relative;
   left: 36%;

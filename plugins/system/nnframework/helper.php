@@ -3,11 +3,11 @@
  * Plugin Helper File
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -155,6 +155,7 @@ class nnApplication
 		$app->triggerEvent('onAfterRender');
 
 		// Mark afterRender in the profiler.
-		JDEBUG ? $app->profiler->mark('afterRender') : null;
+		// Causes issues, so commented out.
+		// JDEBUG ? $app->profiler->mark('afterRender') : null;
 	}
 }

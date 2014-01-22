@@ -14,21 +14,21 @@
 
 #sbox-overlay {
 	position: absolute;
-	background-color: #000;
+	/* background-color: #000; */
 	left: 0px;
 	top: 0px;
 }
 
 #sbox-window {
 	position: absolute;
-	background-color: #fff;
+	/* background-color: #fff; */
 	text-align: left;
 	overflow: visible;
 	padding: 10px;
 	/* invalid values, but looks smoother! */
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+	/* -moz-border-radius: 3px; */
+	/* -webkit-border-radius: 3px; */
+	/* border-radius: 3px; */
 }
 
 #sbox-window[aria-hidden=true],
@@ -94,9 +94,9 @@
 
 /* Shadows */
 #sbox-window.shadow {
-	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	/* -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); */
+	/* -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); */
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); */
 }
 
 .sbox-bg {
@@ -104,6 +104,8 @@
 	width: 33px;
 	height: 40px;
 }
+
+.sbox-bg-wrap { display: none; }
 
 .sbox-bg-n {
 	left: 0;

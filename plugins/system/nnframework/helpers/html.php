@@ -4,11 +4,11 @@
  * extra JHTML functions
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -165,11 +165,6 @@ class nnHtml
 			{
 				$selected = in_array($option->value, $value) ? ' checked="checked"' : '';
 				$disabled = (isset($option->disable) && $option->disable) ? ' readonly="readonly" style="visibility:hidden"' : '';
-
-				if (version_compare(JVERSION, '3.2', 'l'))
-				{
-					$name = $this->name . '[]';
-				}
 
 				$item .= '<input type="checkbox" class="pull-left" name="' . $name . '" id="' . $id . $option->value . '" value="' . $option->value . '"' . $selected . $disabled . ' />
 					<label for="' . $id . $option->value . '" class="' . $labelclass . '">' . $option->text . '</label>';

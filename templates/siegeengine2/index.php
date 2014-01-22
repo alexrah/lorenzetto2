@@ -1,4 +1,5 @@
 <?php defined('_JEXEC') or die;
+// JHTML::_('behavior.modal'); 
 // Load template framework 
 include_once JPATH_THEMES . '/' . $this->template . '/framework.php'; 
 ?>
@@ -13,8 +14,12 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 
 
 <head>
+<?php
+    header('X-Frame-Options: GOFORIT'); 
+?>
+
 	<meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width" />
 	<jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/app.css" />
@@ -156,6 +161,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
   
   <script>
     $(document).foundation();
+      $('#myModal').bind('opened', function() {
+        google.maps.event.trigger(window, 'load', initialize);
+      });
   </script>
   <?php if ($analytics != "UA-XXXXX-X") : ?>
 <!-- http://mths.be/aab -->

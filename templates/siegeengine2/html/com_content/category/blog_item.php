@@ -32,13 +32,13 @@ $info = $this->item->params->get('info_block_position', 0);
 	<?php endif; ?>
 	<?php if ($params->get('show_title')) : ?>
 		<header>
-			<h1>
+			<h2>
 				<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 				<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>" title="<?php echo $this->escape($this->item->title); ?>"> <?php echo $this->escape($this->item->title); ?></a>
 				<?php else : ?>
 				<?php echo $this->escape($this->item->title); ?>
 				<?php endif; ?>
-			</h1>
+			</h2>
 		</header>
 	<?php endif; ?>
 	<?php if ($this->item->state == 0): ?>

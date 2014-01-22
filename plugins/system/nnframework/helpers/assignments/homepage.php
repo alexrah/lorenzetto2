@@ -3,11 +3,11 @@
  * NoNumber Framework Helper File: Assignments: HomePage
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -29,6 +29,14 @@ class NNFrameworkAssignmentsHomePage
 			if (!$home || !isset($home->query['option']) || $home->query['option'] != $parent->params->option)
 			{
 				return $parent->pass(0, $assignment);
+			}
+
+			if (!$parent->params->option)
+			{
+				// set the view/task/layout in the menu item to empty if not set
+				$home->query['view'] = isset($home->query['view']) ? $home->query['view'] : '';
+				$home->query['task'] = isset($home->query['task']) ? $home->query['task'] : '';
+				$home->query['layout'] = isset($home->query['layout']) ? $home->query['layout'] : '';
 			}
 
 			// check set values against home menu query items

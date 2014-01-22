@@ -3,7 +3,7 @@
 @import "compass/css3";
 
 // @include font-face("coamei", font-files("../fonts/coamei_b.woff", woff, "../fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
-@include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot");
+/* @include font-face("coamei", font-files("coamei_b.woff", woff, "fonts/coamei_b.ttf", truetype), "../fonts/coamei_b.eot"); */
 
 @font-face {
     font-family: coamei;
@@ -40,7 +40,7 @@
   /* background-position: top center, left top; */
   /* background-repeat: no-repeat, y-repeat; */
   /* background-size: 100%; */
-  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat , url('../images/prova_pixel_riciclataX.jpg') top left repeat-y;
+  background: url('../images/LOGO_Lorenzetto.png') center top no-repeat;
   background-color: rgb(255,251,247);
   background-size: 100%, 100%;
   @include single-box-shadow(rgb(99,99,99), 6px, 6px, 5px);
@@ -194,31 +194,36 @@ li.elements.item-128, li.elements.item-131, li.item-176, li.item-173 {
   margin: auto 8%;
 }
 li.elements.item-176 a { 
-  font-size: 7px !important;
-  left: -2px;
-  margin-top: 2px;
+  /* font-size: 7px !important; */
+  /* left: -2px; */
+  /* margin-top: 2px; */
 }
 
 li.elements.item-137 a {
   font-size: 9px !important;
-  top: 10px;
+  top: 7px;
+  left: 0px;
+  padding-top: 55%;
 }
 
 li.elements.item-142 a {
   font-size: 10px !important;
   left: 0px;
-  top: 10px;
+  top: 7px;
+  padding-top: 52%;
 }
- 
+
 li.elements.item-119 a {
   left: 0px;
 }
  li.elements.item-147 a {
-   font-size: 11px !important;
+   font-size: 9px !important;
+   top: 7px;
+   padding-top: 55%;
  }
 
 li.elements.item-148 {
-  line-height: 8px;
+  /* line-height: 8px; */
   a {
     /* top: 33px; */
   }
@@ -337,7 +342,7 @@ div.footer-in{
 }
 
 div.footer-home{
-  background: url('../images/sfondo_home3.png') no-repeat right bottom, url('../images/foto-margherita_ciccio.jpg') no-repeat left bottom;
+  background: url('../images/sfondo_home3.png') no-repeat right bottom;
   /* background-position: right top 20px;  */
   /* background-repeat: no-repeat; */
   /* background-size: 64%; */
@@ -604,7 +609,7 @@ and (max-device-width : 568px) {
 /* SIDEBAR RESIZES BASED ON MENU AND SCREEN WIDTH */
 
 @media screen and (min-width: 480px) and (max-width: 560px){
-  #sidebar{ height: 390px; }
+  /* #sidebar{ height: 390px; } */
   /* #sidebar-text{ margin-top: 125%; } */
 }
 @media screen and (min-width: 560px) and (max-width: 655px){ 

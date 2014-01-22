@@ -3,11 +3,11 @@
  * NoNumber Framework Helper File: Functions
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
 
 class NNFrameworkFunctions
 {
-	var $_version = '13.11.11';
+	var $_version = '14.1.1';
 
 	public function getByUrl($url, $options = array())
 	{
@@ -67,11 +67,11 @@ class NNFrameworkFunctions
 	public function getContents($url, $fopen = 0)
 	{
 		$html = '';
-		if (!$fopen && function_exists('curl_init') && function_exists('curl_exec'))
+		if ((!$fopen || !ini_get('allow_url_fopen')) && function_exists('curl_init') && function_exists('curl_exec'))
 		{
 			$html = $this->curl($url);
 		}
-		else
+		else if (ini_get('allow_url_fopen'))
 		{
 			$file = @fopen($url, 'r');
 			if ($file)
@@ -100,13 +100,18 @@ class NNFrameworkFunctions
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'NoNumber/' . $this->_version);
 		curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 
-		$config = JComponentHelper::getParams('com_nonumbermanager');
-		if ($config && $config->get('use_proxy', 0) && $config->get('proxy_host'))
+		jimport('joomla.filesystem.file');
+		if (JFile::exists(JPATH_ADMINISTRATOR . '/components/com_nonumbermanager/nonumbermanager.php'))
 		{
-			curl_setopt($ch, CURLOPT_PROXY, $config->get('proxy_host') . ':' . $config->get('proxy_port'));
-			curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config->get('proxy_login') . ':' . $config->get('proxy_password'));
-			curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+			$config = JComponentHelper::getParams('com_nonumbermanager');
+			if ($config && $config->get('use_proxy', 0) && $config->get('proxy_host'))
+			{
+				curl_setopt($ch, CURLOPT_PROXY, $config->get('proxy_host') . ':' . $config->get('proxy_port'));
+				curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config->get('proxy_login') . ':' . $config->get('proxy_password'));
+				curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+			}
 		}
 
 		//follow on location problems
@@ -210,7 +215,17 @@ class NNFrameworkFunctions
 
 	static function xmlToObject($url, $root)
 	{
-		$xml = new JXMLElement(JFile::read($url));
+		if (!JFile::exists($url))
+		{
+			return new stdClass;
+		}
+
+		$xml = @new SimpleXMLElement($url, LIBXML_NONET, 1);
+
+		if (!@count($xml))
+		{
+			return new stdClass;
+		}
 
 		if ($root)
 		{

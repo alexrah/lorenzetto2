@@ -4,11 +4,11 @@
  * Displays an article id field with a button
  *
  * @package         NoNumber Framework
- * @version         13.11.11
+ * @version         14.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -40,6 +40,7 @@ class JFormFieldNN_Modules extends JFormField
 			->select('m.id, m.title, m.position, m.module, m.published, m.language')
 			->from('#__modules AS m')
 			->where('m.client_id = 0')
+			->where('m.published > -2')
 			->order('m.position, m.title, m.ordering, m.id');
 		$this->db->setQuery($query);
 		$modules = $this->db->loadObjectList();
@@ -129,11 +130,6 @@ class JFormFieldNN_Modules extends JFormField
 		{
 			$attr = $size ? ' size="' . (int) $size . '"' : '';
 			$attr .= $multiple ? ' multiple="multiple"' : '';
-
-			if (version_compare(JVERSION, '3.2', 'l'))
-			{
-				$this->name = $this->name . '[]';
-			}
 
 			$html = JHtml::_('select.genericlist', $options, $this->name, trim($attr), 'value', 'text', $this->value, $this->id);
 		}
