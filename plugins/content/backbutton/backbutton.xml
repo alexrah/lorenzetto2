@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<extension version="1.7" type="plugin" group="content" method="upgrade">
+  <name>Content - Back button</name>
+  <author>Wojciech Smolinski</author>
+  <authorEmail>wojsmol@wp.pl</authorEmail>
+  <authorUrl></authorUrl>
+  <creationDate>April 2008</creationDate>
+  <copyright>Copyright Zwart Schaap webdesign 2008 and Wojciech Smoliński 2011</copyright>
+  <license>GNU/GPL</license>
+  <version>1.2</version>
+  <description>BB_DESCRIPTION</description>
+  <files>
+    <filename plugin="backbutton">backbutton.php</filename>
+	<folder>language</folder>
+  </files>
+<config>
+<fields name="params">
+  <fieldset name="basic">
+    <field name="linklabel" type="text" label="DISPLAY_TEXT" description="DISPLAY_TEXT_DESC" />
+    <field name="showindiv" type="radio" default="1" label="WRAP_DIV" description="PUT_A_DIV_TAG_AROUND_THE_LINK">
+      <option value="0">JNO</option>
+      <option value="1">JYES</option>
+    </field>
+  </fieldset>
+  </fields>
+ </config>
+</extension>

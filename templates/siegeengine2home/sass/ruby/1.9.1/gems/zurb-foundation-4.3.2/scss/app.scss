@@ -23,6 +23,8 @@
        url('../fonts/dinosaur.ttf') format('truetype');
 }
 
+$bluemarine: rgb(0,169,157);
+
 /** CSS TRICKS -> BACKGROUND IMAGES LINK */
    #link{
     display: block;
@@ -125,7 +127,8 @@ li {
 .item-107, .item-115, .item-122, .item-139, .item-149{ background-color: rgb(83,142,180); }
 li.elements.item-133, li.elements.item-141, li.elements.item-142, li.elements.item-146 { 
   background-image: url("../images/pulsante_carrello_bianco.jpg");
-  background-size: 100%;
+  background-position: right bottom;
+  background-size: 102% 102%;
   background-repeat: no-repeat;
   border: 6px solid rgb(154,101,153);
   /* border: 0px solid transparent; */
@@ -475,6 +478,16 @@ div.above-content{
 
 #sbox-btn-close{ display: none; }
 
+
+/** CERCA IMMAGINE BUTTON */
+
+.search button {
+  background: url('../images/searchButton.gif') no-repeat bottom center;
+  background-size: 50%;
+  background-color: $bluemarine;
+}
+
+
 /* ALLA MEDIA QUERIES START FROM HERE */
 
 /* Retina iPad in portrait & landscape */
@@ -702,7 +715,18 @@ ul.sigProClassic{
   left: 30%;
   margin-left: 5px;
 }
-  
+
+  .search {
+  .page-title{
+    margin-top: -30%;
+    color: #00a99d;
+  }
+  position: relative;
+  left: 28%;
+  width: 70%;
+}
+
+
 }
 @media screen and (min-width: 610px){
   .search_wide{

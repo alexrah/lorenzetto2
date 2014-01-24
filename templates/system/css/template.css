@@ -1,0 +1,18 @@
+
+
+@font-face {
+    font-family: coamei;
+    src: url('../../siegeengine2/fonts/coamei_b.eot');  /* fix IE not working with if ttf is the default format */
+    src: url('../../siegeengine2/fonts/coamei_b.eot?#iefix') format('embedded-opentype'),
+         url('../../siegeengine2/fonts/coamei_b.woff') format('woff'),
+         url('../../siegeengine2/fonts/coamei_b.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body{
+  font-family: coamei;
+}
